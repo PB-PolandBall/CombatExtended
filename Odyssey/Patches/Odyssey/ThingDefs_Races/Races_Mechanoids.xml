@@ -2,6 +2,7 @@
 <Patch>
 
 	<!-- ========== Cyclops ========== -->
+
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>Defs/ThingDef[defName="Mech_Cyclops"]
 		</xpath>
