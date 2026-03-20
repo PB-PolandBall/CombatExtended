@@ -79,5 +79,10 @@ public class Multiplayer : IPatch
         public int[] exposeParameters = null;
     }
 
+    [AttributeUsage(AttributeTargets.Field)]
+    public class SyncFieldAttribute : Attribute
+    {
+    }
+
 
 }
