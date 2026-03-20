@@ -83,7 +83,10 @@ public class MultiplayerCompat : IModPart
     }
 
 
-
+    private static bool SynchronizeField(object obj, string field, object val) {
+        syncFieldAttributes[field].DoSync(obj, val);
+        return true;
+    }
     /*
       We enable nullable context for the rest of this file, because the Multiplayer API can call these functions with a null thing to synchronize on the reading end.
       When writing, the comp should never be null.  
