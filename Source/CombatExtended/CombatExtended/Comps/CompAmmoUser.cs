@@ -17,6 +17,7 @@ public class CompAmmoUser : CompRangedGizmoGiver
     #region Fields
 
     private int curMagCountInt = 0;
+    [Compatibility.Multiplayer.SyncFieldAttribute]
     private int tryReloadOn = 0;
     protected AmmoDef currentAmmoInt = null;
     protected AmmoDef selectedAmmo;
