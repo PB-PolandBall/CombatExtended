@@ -61,7 +61,7 @@ public class Multiplayer : IPatch
 
     public static void syncField<T>(T target, string field, object val) {
         if (InMultiplayer) {
-            _syncField(target, T.FullName + "/" + field, val);
+            _syncField(target, typeof(T).FullName + "/" + field, val);
         }
     }
 
