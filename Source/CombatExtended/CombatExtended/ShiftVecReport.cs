@@ -31,7 +31,10 @@ public class ShiftVecReport
                 float offset = bounds.center.y - shotHeight;
 
                 // calculate uncertainty in xz position
-                float VS = visibilityShift + circularMissRadius + indirectFireShift;
+                float VS = Mathf.Sqrt(visibilityShift * visibilityShift
+                                      + circularMissRadius * circularMissRadius
+                                      + indirectFireShift * indirectFireShift
+                                      + leadShift * leadShift);
                 float prob = CE_Math.CalculateHitPercent(dist, bounds, 0, shotSpeed, shotAngle, swayDegrees, spreadDegrees, VS, CE_Utility.GravityConst);
 
                 hitChance = GenText.ToStringByStyle(prob * 100, ToStringStyle.FloatTwo);
