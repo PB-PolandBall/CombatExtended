@@ -84,7 +84,12 @@ public class CompAmmoUser : CompRangedGizmoGiver
     public int TryReloadOn
     {
         get => tryReloadOn;
-        set => tryReloadOn = value;
+        set {
+            if (tryReloadOn != value) {
+                tryReloadOn = value;
+                Compatibility.Multiplayer.syncField(this, nameof(tryReloadOn), value);
+            }
+        }
     }
     public float SafeDistanceToReload => Controller.settings.OpportunisticReloadSafeDistance;
 
