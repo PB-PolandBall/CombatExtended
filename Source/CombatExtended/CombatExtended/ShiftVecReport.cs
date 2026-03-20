@@ -13,6 +13,33 @@ public class ShiftVecReport
     public LocalTargetInfo target = null;
     public GlobalTargetInfo globalTarget = GlobalTargetInfo.Invalid;
 
+    private string hitChance = "";
+    public float MinHitChance = 0.35f;
+    public string HitChance
+    {
+        get
+        {
+            if (hitChance == "")
+            {
+                if (target.Thing is null)
+                {
+                    return "-";
+                }
+
+                Bounds bounds = CE_Utility.GetBoundsFor(target.Thing);
+                float dist = shotDist;
+                float offset = bounds.center.y - shotHeight;
+
+                // calculate uncertainty in xz position
+                float VS = visibilityShift + circularMissRadius + indirectFireShift;
+                float prob = CE_Math.CalculateHitPercent(dist, bounds, 0, shotSpeed, shotAngle, swayDegrees, spreadDegrees, VS, CE_Utility.GravityConst);
+
+                hitChance = GenText.ToStringByStyle(prob * 100, ToStringStyle.FloatTwo) + "%";
+            }
+            return hitChance;
+        }
+    }
+
     public Pawn targetPawn
     {
         get
@@ -117,6 +144,8 @@ public class ShiftVecReport
 
     // Range variables
     public float shotDist = 0f;
+    public float shotHeight = 0f;
+    public float shotAngle = 0f;
     public float maxRange;
     public float distShift
     {
@@ -272,6 +301,7 @@ public class ShiftVecReport
             }
             PlayerKnowledgeDatabase.KnowledgeDemonstrated(CE_ConceptDefOf.CE_AimingSystem, KnowledgeAmount.FrameDisplayed); // Show we learned about the aiming system
         }
+        stringBuilder.AppendLine("   " + "CE_EstimatedHitChance".Translate() + "\t" + HitChance + "%");
         return stringBuilder.ToString();
     }
 }
