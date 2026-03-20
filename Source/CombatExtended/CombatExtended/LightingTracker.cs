@@ -17,6 +17,7 @@ public class LightingTracker : MapComponent
     private static readonly IntVec3[] AdjCells;
     private static readonly float[] AdjWeights;
     private readonly float[] glowGridCache;
+    private readonly float[] coverGridCache;
     private int lastTick = 0;
 
     static LightingTracker()
@@ -141,6 +142,8 @@ public class LightingTracker : MapComponent
 
         muzzle_grid = new MuzzleRecord[NumGridCells];
         glowGridCache = new float[map.Size.x * map.Size.y];
+
+        coverGridCache = new float[map.Size.x * map.Size.y];
     }
 
     public override void ExposeData()
@@ -244,12 +247,40 @@ public class LightingTracker : MapComponent
         return Mathf.Min(result, IsNight ? 0.5f : 1.0f);
     }
 
+    public float HighestCoverAt(IntVec3 position)
+    {
+        int thisTick = Find.TickManager.TicksAbs;
+        if (thisTick != lastTick)
+        {
+            Array.Fill(coverGridCache, -1f);
+            Array.Fill(glowGridCache, -1f);
+            lastTick = thisTick;
+        }
+        float coverHeight = glowGridCache[position.x * map.Size.y + position.y];
+        if (coverHeight == -1)
+        {
+            Thing cover = position.GetFirstPawn(map) ?? position.GetCover(map);
+            if (cover == null)
+            {
+                coverHeight = 0;
+            }
+            else
+            {
+                Bounds bounds = CE_Utility.GetBoundsFor(cover);
+                coverHeight = bounds.size.y;
+            }
+            coverGridCache[position.x * map.Size.y + position.y] = coverHeight;
+        }
+        return coverHeight;
+    }
+
     private float GameGlowAt(IntVec3 source)
     {
         int thisTick = Find.TickManager.TicksAbs;
 
         if (thisTick != lastTick)
         {
+            Array.Fill(coverGridCache, -1f);
             Array.Fill(glowGridCache, -1f);
             lastTick = thisTick;
         }
