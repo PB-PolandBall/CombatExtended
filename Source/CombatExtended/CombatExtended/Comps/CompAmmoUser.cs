@@ -84,8 +84,10 @@ public class CompAmmoUser : CompRangedGizmoGiver
     public int TryReloadOn
     {
         get => tryReloadOn;
-        set {
-            if (tryReloadOn != value) {
+        set
+        {
+            if (tryReloadOn != value)
+            {
                 tryReloadOn = value;
                 Compatibility.Multiplayer.syncField(this, nameof(tryReloadOn), value);
             }

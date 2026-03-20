@@ -32,8 +32,7 @@ public class MultiplayerCompat : IModPart
     }
     public void SlowInit(ModContentPack content)
     {
-
-        syncFieldAttributes = new ();
+        syncFieldAttributes = new();
         var fields = content.assemblies.loadedAssemblies
                       .SelectMany(a => a.GetTypes())
                       .SelectMany(t => t.GetFields(BindingFlags.DeclaredOnly | BindingFlags.Instance | BindingFlags.Static | BindingFlags.NonPublic | BindingFlags.Public))
@@ -85,8 +84,8 @@ public class MultiplayerCompat : IModPart
                                                                            SynchronizeField);
     }
 
-
-    private static bool SynchronizeField(object obj, string field, object val) {
+    private static bool SynchronizeField(object obj, string field, object val)
+    {
         syncFieldAttributes[field].DoSync(obj, val);
         return true;
     }
