@@ -69,6 +69,11 @@ public class MultiplayerCompat : IModPart
 
 
 
+    /*
+      We enable nullable context for the rest of this file, because the Multiplayer API can call these functions with a null thing to synchronize on the reading end.
+      When writing, the comp should never be null.  
+     */
+#nullable enable
     [SyncWorker]
     private static void SyncCompAmmoUser(SyncWorker sync, ref CompAmmoUser comp)
     {
@@ -202,3 +207,4 @@ public class MultiplayerCompat : IModPart
     private static void SyncITab_Inventory(SyncWorker sync, ref ITab_Inventory inventory)
     { }
 }
+#nullable restore
