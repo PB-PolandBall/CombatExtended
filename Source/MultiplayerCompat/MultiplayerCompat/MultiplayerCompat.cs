@@ -79,7 +79,10 @@ public class MultiplayerCompat : IModPart
 
         MP.RegisterAll();
 
-        global::CombatExtended.Compatibility.Multiplayer.registerCallbacks((() => MP.IsInMultiplayer), (() => MP.IsExecutingSyncCommand), (() => MP.IsExecutingSyncCommandIssuedBySelf));
+        global::CombatExtended.Compatibility.Multiplayer.registerCallbacks((() => MP.IsInMultiplayer),
+                                                                           (() => MP.IsExecutingSyncCommand),
+                                                                           (() => MP.IsExecutingSyncCommandIssuedBySelf),
+                                                                           SynchronizeField);
     }
 
 
