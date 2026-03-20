@@ -34,7 +34,7 @@ public class ShiftVecReport
                 float VS = visibilityShift + circularMissRadius + indirectFireShift;
                 float prob = CE_Math.CalculateHitPercent(dist, bounds, 0, shotSpeed, shotAngle, swayDegrees, spreadDegrees, VS, CE_Utility.GravityConst);
 
-                hitChance = GenText.ToStringByStyle(prob * 100, ToStringStyle.FloatTwo) + "%";
+                hitChance = GenText.ToStringByStyle(prob * 100, ToStringStyle.FloatTwo);
             }
             return hitChance;
         }
