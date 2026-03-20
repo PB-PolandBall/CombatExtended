@@ -75,11 +75,11 @@ public class MultiplayerCompat : IModPart
      */
 #nullable enable
     [SyncWorker]
-    private static void SyncCompAmmoUser(SyncWorker sync, ref CompAmmoUser comp)
+    private static void SyncCompAmmoUser(SyncWorker sync, ref CompAmmoUser? comp)
     {
         if (sync.isWriting)
         {
-            var caster = comp.parent.GetComp<CompEquippable>().PrimaryVerb.Caster;
+            var caster = comp!.parent.GetComp<CompEquippable>().PrimaryVerb.Caster;
 
             // Sync the turret because in that case syncing fails, due to comp.parent.Map being null,
             // which causes it to be inaccessible in MP for general syncing
@@ -111,11 +111,11 @@ public class MultiplayerCompat : IModPart
     }
 
     [SyncWorker]
-    private static void SyncCompFireMode(SyncWorker sync, ref CompFireModes comp)
+    private static void SyncCompFireMode(SyncWorker sync, ref CompFireModes? comp)
     {
         if (sync.isWriting)
         {
-            var caster = comp.Caster;
+            var caster = comp!.Caster;
 
             // Sync the turret because in that case syncing fails, due to comp.parent.Map being null,
             // which causes it to be inaccessible in MP for general syncing
@@ -147,11 +147,11 @@ public class MultiplayerCompat : IModPart
     }
 
     [SyncWorker]
-    private static void SyncLoadout(SyncWorker sync, ref Loadout loadout)
+    private static void SyncLoadout(SyncWorker sync, ref Loadout? loadout)
     {
         if (sync.isWriting)
         {
-            sync.Write(loadout.UniqueID);
+            sync.Write(loadout!.UniqueID);
         }
         else
         {
@@ -161,7 +161,7 @@ public class MultiplayerCompat : IModPart
     }
 
     [SyncWorker]
-    private static void SyncLoadoutSlot(SyncWorker sync, ref LoadoutSlot loadoutSlot)
+    private static void SyncLoadoutSlot(SyncWorker sync, ref LoadoutSlot? loadoutSlot)
     {
         if (sync.isWriting)
         {
@@ -204,7 +204,7 @@ public class MultiplayerCompat : IModPart
     // Don't sync anything, we just want a blank instance for method calling purposes
     // We only care about shouldConstruct being true
     [SyncWorker(shouldConstruct = true)]
-    private static void SyncITab_Inventory(SyncWorker sync, ref ITab_Inventory inventory)
+    private static void SyncITab_Inventory(SyncWorker sync, ref ITab_Inventory? inventory)
     { }
 }
 #nullable restore
