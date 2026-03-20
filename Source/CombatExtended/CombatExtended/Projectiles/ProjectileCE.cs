@@ -1441,7 +1441,8 @@ public abstract class ProjectileCE : ThingWithComps
             }
         }
 
-        if (Map.GetLightingTracker().HighestCoverAt(pos) > ExactPosition.y) {
+        if (Map.GetLightingTracker().HighestCoverAt(pos) > ExactPosition.y)
+        {
             // FIXME : Early opt-out
             Thing thing = pos.GetFirstPawn(Map);
             if (thing != null && TryCollideWith(thing))
