@@ -8,10 +8,12 @@ using CombatExtended.Loader;
 using System.Collections.Generic;
 
 using SyncMethodAttribute = global::CombatExtended.Compatibility.Multiplayer.SyncMethodAttribute;
+using SyncFieldAttribute = global::CombatExtended.Compatibility.Multiplayer.SyncFieldAttribute;
 
 namespace CombatExtended.Compatibility.MultiplayerAPI;
 public class MultiplayerCompat : IModPart
 {
+    private static Dictionary<string, ISyncField> syncFieldAttributes;
     public MultiplayerCompat() { }
     public Type GetSettingsType()
     {
@@ -30,6 +32,19 @@ public class MultiplayerCompat : IModPart
     }
     public void SlowInit(ModContentPack content)
     {
+
+        syncFieldAttributes = new ();
+        var fields = content.assemblies.loadedAssemblies
+                      .SelectMany(a => a.GetTypes())
+                      .SelectMany(t => t.GetFields(BindingFlags.DeclaredOnly | BindingFlags.Instance | BindingFlags.Static | BindingFlags.NonPublic | BindingFlags.Public))
+                      .Where(m => m.HasAttribute<SyncFieldAttribute>());
+
+        foreach (var field in fields)
+        {
+            var syncField = MP.RegisterSyncField(field.DeclaringType, field.Name).SetBufferChanges();
+            syncFieldAttributes[field.DeclaringType.FullName + "/" + field.Name] = syncField;
+        }
+
         var methods = content.assemblies.loadedAssemblies
                       .SelectMany(a => a.GetTypes())
                       .SelectMany(t => t.GetMethods(BindingFlags.DeclaredOnly | BindingFlags.Instance | BindingFlags.Static | BindingFlags.NonPublic | BindingFlags.Public))
