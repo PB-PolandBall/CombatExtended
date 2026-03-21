@@ -26,8 +26,12 @@ public class ShiftVecReport
                 }
 
                 Bounds bounds = CE_Utility.GetBoundsFor(target.Thing);
+
+                if (cover != null) {
+                    bounds.min.y = CE_Utility.GetBoundsFor(cover).max.y;
+                }
+
                 float dist = shotDist;
-                float offset = bounds.center.y - shotHeight;
 
                 // calculate uncertainty in xz position
                 float VS = Mathf.Sqrt(visibilityShift * visibilityShift
