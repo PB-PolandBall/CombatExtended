@@ -14,7 +14,7 @@ public static class CE_Math
       See https://www.johndcook.com/stand_alone_code.html for details.
     */
 
-        #region Statistical Math
+    #region Statistical Math
     private static double RationalApproximation(double t)
     {
         // Abramowitz and Stegun formula 26.2.23.
@@ -79,7 +79,7 @@ public static class CE_Math
         return (1 + erf(x / sqrt2)) / 2.0f;
     }
 
-        #endregion
+    #endregion
     public static float CalculateHitPercent(float dist, Bounds bounds, float offset, float shotSpeed, float shotAngle, float swayDegrees, float spreadDegrees, float visibilityShift, float gravity)
     {
         float w = Mathf.Sqrt(bounds.size.x * bounds.size.x + bounds.size.z * bounds.size.z);
@@ -203,4 +203,3 @@ public static class CE_Math
         return d_min;
     }
 }
-

@@ -27,7 +27,8 @@ public class ShiftVecReport
 
                 Bounds bounds = CE_Utility.GetBoundsFor(target.Thing);
 
-                if (cover != null) {
+                if (cover != null)
+                {
                     var cv = new CollisionVertical(cover);
                     var cy_min = Mathf.Max(bounds.min.y, cv.Max);
                     var cy_max = bounds.max.y;
