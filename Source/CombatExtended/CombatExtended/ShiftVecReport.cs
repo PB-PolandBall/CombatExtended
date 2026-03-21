@@ -14,7 +14,6 @@ public class ShiftVecReport
     public GlobalTargetInfo globalTarget = GlobalTargetInfo.Invalid;
 
     private string hitChance = "";
-    public float MinHitChance = 0.35f;
     public string HitChance
     {
         get
