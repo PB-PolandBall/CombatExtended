@@ -28,7 +28,11 @@ public class ShiftVecReport
                 Bounds bounds = CE_Utility.GetBoundsFor(target.Thing);
 
                 if (cover != null) {
-                    bounds.min.y = CE_Utility.GetBoundsFor(cover).max.y;
+                    var cv = new CollisionVertical(cover);
+                    var cy_min = Mathf.Max(bounds.min.y, cv.Max);
+                    var cy_max = bounds.max.y;
+                    bounds = new Bounds(new Vector3(bounds.center.x, cy_min + cy_max / 2, bounds.center.z),
+                                        new Vector3(bounds.size.x, (cy_max - cy_min), bounds.size.z));
                 }
 
                 float dist = shotDist;
