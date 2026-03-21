@@ -34,7 +34,7 @@ public class ShiftVecReport
                                       + circularMissRadius * circularMissRadius
                                       + indirectFireShift * indirectFireShift
                                       + leadShift * leadShift);
-                float prob = CE_Math.CalculateHitPercent(dist, bounds, 0, shotSpeed, shotAngle, swayDegrees, spreadDegrees, VS, CE_Utility.GravityConst);
+                float prob = CE_Math.CalculateHitPercent(dist, bounds, targetHeight, shotSpeed, shotAngle, swayDegrees, spreadDegrees, VS, CE_Utility.GravityConst);
 
                 hitChance = GenText.ToStringByStyle(prob * 100, ToStringStyle.FloatTwo);
             }
@@ -147,6 +147,7 @@ public class ShiftVecReport
     // Range variables
     public float shotDist = 0f;
     public float shotHeight = 0f;
+    public float targetHeight = 0f;
     public float shotAngle = 0f;
     public float maxRange;
     public float distShift
