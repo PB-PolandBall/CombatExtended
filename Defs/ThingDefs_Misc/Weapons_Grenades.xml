@@ -190,7 +190,7 @@
 		</graphicData>
 		<soundInteract>Interact_Grenade</soundInteract>
 		<techLevel>Industrial</techLevel>
-		<stackLimit>250</stackLimit>
+		<stackLimit>50</stackLimit>
 		<statBases>
 			<Mass>0.236</Mass>
 			<Bulk>0.61</Bulk>
