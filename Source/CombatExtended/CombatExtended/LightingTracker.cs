@@ -256,7 +256,7 @@ public class LightingTracker : MapComponent
             Array.Fill(glowGridCache, -1f);
             lastTick = thisTick;
         }
-        float coverHeight = glowGridCache[position.x * map.Size.y + position.y];
+        float coverHeight = coverGridCache[position.x * map.Size.y + position.y];
         if (coverHeight == -1)
         {
             Thing cover = position.GetFirstPawn(map) ?? position.GetCover(map);
