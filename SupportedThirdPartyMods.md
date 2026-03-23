@@ -625,6 +625,7 @@ Vanilla Factions Expanded - Settlers	|
 Vanilla Factions Expanded - Tribals |
 Vanilla Furniture Expanded - Production	|
 Vanilla Furniture Expanded -  Security |
+Vanilla Furniture Expanded -  Factory |
 Vanilla Genetics Expanded   |
 Vanilla Ideology Expanded – Dryads  |
 Vanilla Ideology Expanded - Hats and Rags |
