@@ -76,6 +76,7 @@ ABF: Utility Synstructs   |
 ADE Advanced Turrets    |
 ADE Advanced Turrets +  |
 Advanced Mortar (Continued) |
+Advanced Mechanoids |
 All-Tech Melee |
 Alpha Animals |
 Alpha Biomes |
@@ -128,6 +129,7 @@ Astra Militarum Regimentum - Krieg  |
 Astra Militarum Regimentum - Krieg: Officer Helmet  |
 Autocleaner	|
 Auto-Mortars	|
+Bean's Turret Pack  |
 Beast Man Tribes  |
 Beeralope Squad	|
 Beliar Xenotype |
@@ -216,6 +218,7 @@ Epochs - Pyrinth    |
 Epona The centaur race  |
 Equiums Horse Race	|
 Erin's Au Ra    |
+Erin's Auraeyl  |
 Erin's Auronya   |
 Erin's Auronya - HAR Edition   |
 Erin's Azaphrae |
@@ -269,6 +272,7 @@ Gas Traps And Shells	|
 Gestalt Engine  |
 Giddy-Up 2    |
 Girls' Frontline Apparel Pack	|
+Girls' Frontline PROJECT NEURAL CLOUD   |
 Girls' Frontline Styles - 404 Team	|
 Girls' Frontline Styles - AR Team	|
 Girls' Frontline Styles - DEFY Team	|
@@ -355,6 +359,7 @@ Mass Effect - Playable Geth |
 Martens - Nature's Most Adorable Assassins  |
 Mechadroids |
 Mechanized Armor Set    |
+Mechanitor Balance Tweaks      |
 Mechanoid Bench 2   |
 Mechanoid Bench 3   |
 Mechanoids Extraordinaire	|
@@ -420,6 +425,7 @@ Neclose Race	|
 Nephilim Xenotype Reborn    |
 New Mech: Mini-Miner    |
 Ni'Hal	|
+Nikke The Pilgrim   |
 Nukes   |
 Nyaron Race |
 Nomad Scavengers    |
@@ -525,7 +531,7 @@ Rimsenal Xenotype Pack - Askbarn    |
 Rimsenal Xenotype Pack - Harana |
 Rimsenal Xenotype Pack - Zohar  |
 RimTraits - General Traits  |
-RimTraits – Medieval Talents    |
+RimTraits - Medieval Talents    |
 Rimworld - The Dark Descent |
 Rimworld - Witcher Monster Hunt |
 Rimworld-Style Pilas and Bows Strapped with Grenades and Shells Extended    |
@@ -559,7 +565,7 @@ Space Worms (Continued) |
 Spartan Foundry	|
 Spidercamp's Horses     |
 SRTS Expanded	|
-Stalingrad – Uniforms   |
+Stalingrad - Uniforms   |
 Star Crafters Armory  |
 Star Wars - Factions |
 Starship Troopers Aracnids  |
@@ -571,6 +577,7 @@ Supernatural Weapons    |
 Swords (Continued)  |
 Tactical Extremity Protection [BAL] |
 Textiles+ (continued)   |
+Tiered Mechs    |
 The Corporation - Mort's Factions   |
 The Mantodean insectoid race	|
 The Profaned	|
@@ -598,6 +605,7 @@ Twi'lek Race    |
 T's Conversion Staff |
 T's Samurai Faction |
 T's Wild Child Rags |
+UNAGI Another Duster Coat   |
 Useless Clothes |
 Ushankas Glittertech Expansion  |
 VacSlipsuit |
@@ -613,6 +621,7 @@ Vanilla Arsenal |
 Vanilla Base Generation Expanded    |
 Vanilla Brewing Expanded    |
 Vanilla Chemfuel Expanded   |
+Vanilla Events Expanded   |
 Vanilla Factions Expanded - Ancients    |
 Vanilla Factions Expanded - Classical   |
 Vanilla Factions Expanded - Deserters  |
@@ -627,7 +636,7 @@ Vanilla Furniture Expanded - Production	|
 Vanilla Furniture Expanded -  Security |
 Vanilla Furniture Expanded -  Factory |
 Vanilla Genetics Expanded   |
-Vanilla Ideology Expanded – Dryads  |
+Vanilla Ideology Expanded - Dryads  |
 Vanilla Ideology Expanded - Hats and Rags |
 Vanilla Ideology Expanded - Memes and Structures    |
 Vanilla Persona Weapons Expanded   |
