@@ -168,7 +168,6 @@
 	</Operation>
 	
 	<!-- Deadlife -->
-
 	
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/PipeSystem.ProcessDef[defName="VFEFactory_MakeDeadlifeShells"]/ingredients</xpath>
