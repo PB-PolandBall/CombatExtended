@@ -3,6 +3,16 @@
 	<!-- Updating factory shell recipes to reflect base Combat Extended recipes -->
 	<!-- Note that the component costs of these shells had to be rolled into the steel costs because the ammo press factory building only has two inputs, and thus can't accept three inputs -->
 	
+	<!-- High-explosive -->
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/PipeSystem.ProcessDef[defName="VFEFactory_MakeHighExplosiveShells"]/ingredients/li[thing="Steel"]/countNeeded</xpath>
+		<value>
+			<countNeeded>78</countNeeded>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/PipeSystem.ProcessDef[defName="VFEFactory_MakeHighExplosiveShells"]/ingredients/li[thing="Chemfuel"]/countNeeded</xpath>
 		<value>
 			<countNeeded>10</countNeeded>
