@@ -5,7 +5,7 @@
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ScenarioDef[defName="BTG_IndependentTraders"]/scenario/parts</xpath>
 		<value>
-			<li Class="ScenPart_ScatterThingsNearPlayerStart">
+			<li Class="ScenPart_StartingThing_Defined">
 				<def>StartingThing_Defined</def>
 				<thingDef>Ammo_6x24mmCharged</thingDef>
 				<count>300</count>
@@ -16,7 +16,7 @@
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ScenarioDef[defName="BTG_IndependentTraders"]/scenario/parts</xpath>
 		<value>
-			<li Class="ScenPart_ScatterThingsNearPlayerStart">
+			<li Class="ScenPart_StartingThing_Defined">
 				<def>StartingThing_Defined</def>
 				<thingDef>Ammo_44Magnum_FMJ</thingDef>
 				<count>60</count>
@@ -28,7 +28,7 @@
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ScenarioDef[defName="BTG_ExiledTraders"]/scenario/parts</xpath>
 		<value>
-			<li Class="ScenPart_ScatterThingsNearPlayerStart">
+			<li Class="ScenPart_StartingThing_Defined">
 				<def>StartingThing_Defined</def>
 				<thingDef>Ammo_6x24mmCharged</thingDef>
 				<count>300</count>
@@ -39,7 +39,7 @@
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ScenarioDef[defName="BTG_ExiledTraders"]/scenario/parts</xpath>
 		<value>
-			<li Class="ScenPart_ScatterThingsNearPlayerStart">
+			<li Class="ScenPart_StartingThing_Defined">
 				<def>StartingThing_Defined</def>
 				<thingDef>Ammo_44Magnum_FMJ</thingDef>
 				<count>60</count>
