@@ -39,7 +39,7 @@ public class Building_TurretGunCE : Building_Turret
     public CompCanBeDormant dormantComp;
     public CompInitiatable initiatableComp;
     public CompMannable mannableComp;
-    public CompHackable hackableComp; 
+    public CompHackable hackableComp;
     public static Material ForcedTargetLineMat = MaterialPool.MatFrom(GenDraw.LineTexPath, ShaderDatabase.Transparent, new Color(1f, 0.5f, 0.5f));
 
     // New fields
@@ -56,8 +56,8 @@ public class Building_TurretGunCE : Building_Turret
 
     #region Properties
     // Core properties
-    public virtual bool Active => (powerComp == null || powerComp.PowerOn) && 
-                                   (dormantComp == null || dormantComp.Awake) && 
+    public virtual bool Active => (powerComp == null || powerComp.PowerOn) &&
+                                   (dormantComp == null || dormantComp.Awake) &&
                                    (initiatableComp == null || initiatableComp.Initiated) &&
                                    (hackableComp == null || !hackableComp.IsHacked);
     public CompEquippable GunCompEq => Gun.TryGetComp<CompEquippable>();
