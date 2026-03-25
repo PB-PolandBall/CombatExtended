@@ -135,6 +135,7 @@ Beeralope Squad	|
 Beliar Xenotype |
 Beta Anime Hair	|
 Beta Girls und Panzer Hair and Apparel	|
+Better Traders Guild    |
 Better Wool Production - C# Edition	|
 Big and Small - Genes & More	|
 Big and Small - Heaven and Hell
@@ -634,6 +635,7 @@ Vanilla Factions Expanded - Settlers	|
 Vanilla Factions Expanded - Tribals |
 Vanilla Furniture Expanded - Production	|
 Vanilla Furniture Expanded -  Security |
+Vanilla Furniture Expanded -  Factory |
 Vanilla Genetics Expanded   |
 Vanilla Ideology Expanded - Dryads  |
 Vanilla Ideology Expanded - Hats and Rags |
