@@ -1870,7 +1870,7 @@
 
 	<!-- === Giant toad === -->
 	<Operation Class="PatchOperationAddModExtension">
-		<xpath>Defs/ThingDef[defName="Alligator"]</xpath>
+		<xpath>Defs/ThingDef[defName="ColossusToad"]</xpath>
 		<value>
 			<li Class="CombatExtended.RacePropertiesExtensionCE">
 				<bodyShape>Quadruped</bodyShape>
