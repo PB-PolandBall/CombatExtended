@@ -145,6 +145,7 @@
 			<SwayFactor>1.79</SwayFactor>
 			<Bulk>12.03</Bulk>
 			<RangedWeapon_Cooldown>1.2</RangedWeapon_Cooldown>
+			<MarketValue>270</MarketValue>
 		</statBases>
 		<costList>
 			<Steel>75</Steel>
