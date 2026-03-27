@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-<!-- 
-From the original dev:
-The clothing included in Ponpeco Kids' Clothes — especially items in the Skin Layer — was roughly balanced as a combination of the vanilla kids’ T-shirt and kids’ pants (essentially adding their stats together), if I remember correctly.
-Since this was one of my first mods, it wasn’t based on a strong design decision, more like “this feels about right.”
--->
+
     <Operation Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[defName="Apparel_PKCBackpack"]/statBases</xpath>
 		<value>
@@ -47,6 +43,7 @@ Since this was one of my first mods, it wasn’t based on a strong design decisi
 			<Bulk>1</Bulk>
 		</value>
 	</Operation>
+
 	<!-- Equivalent to Parka-->
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[@Name="PKCApparelOuterMakeableBase"]/statBases/StuffEffectMultiplierArmor</xpath>
@@ -65,7 +62,6 @@ Since this was one of my first mods, it wasn’t based on a strong design decisi
 		</value>
 	</Operation>
 
-
 	<!-- Equivalent to Tuque-->
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Apparel_PKCCheckedHood"]/statBases/StuffEffectMultiplierArmor</xpath>
@@ -83,15 +79,12 @@ Since this was one of my first mods, it wasn’t based on a strong design decisi
 		</value>
 	</Operation>
 
-
-
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Apparel_PKCHeroHelmet"]/statBases/StuffEffectMultiplierArmor</xpath>
 		<value>
 			<StuffEffectMultiplierArmor>2.5</StuffEffectMultiplierArmor>
 		</value>
 	</Operation>
-
 
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Apparel_PKCHeroHelmet"]/stuffCategories/li[.="Metallic"]</xpath>
@@ -166,8 +159,6 @@ Since this was one of my first mods, it wasn’t based on a strong design decisi
 		</value>
 	</Operation>
 
-
-
 	<!-- Vacsuits-->
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[defName="Apparel_PKCVacsuitChildrenA" or defName="Apparel_PKCVacsuitChildrenB"]/statBases</xpath>
@@ -198,11 +189,5 @@ Since this was one of my first mods, it wasn’t based on a strong design decisi
 			<li>Feet</li>
 		</value>
 	</Operation>
-
-
-
-
-
-
 
 </Patch>
