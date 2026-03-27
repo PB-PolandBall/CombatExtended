@@ -38,7 +38,7 @@ public static class CE_Math
         }
 
         // See article above for explanation of this section.
-        if (p < 0.5)
+        if (p <= 0.5)
         {
             // F^-1(p) = - G^-1(p)
             return -RationalApproximation(Math.Sqrt(-2.0 * Math.Log(p)));
