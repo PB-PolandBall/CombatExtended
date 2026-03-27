@@ -40,6 +40,7 @@ public class ShiftVecReport
                                         new Vector3(bounds.size.x, (cy_max - cy_min), bounds.size.z));
                 }
 
+                var offset = bounds.size.y / 2;
                 float dist = shotDist;
 
                 // calculate uncertainty in xz position
@@ -47,7 +48,8 @@ public class ShiftVecReport
                                       + circularMissRadius * circularMissRadius
                                       + indirectFireShift * indirectFireShift
                                       + leadShift * leadShift);
-                float prob = CE_Math.CalculateHitPercent(dist, bounds, targetHeight, shotSpeed, shotAngle, swayDegrees, spreadDegrees, VS, CE_Utility.GravityConst);
+
+                float prob = CE_Math.CalculateHitPercent(dist, bounds, offset, shotSpeed, shotAngle, swayDegrees, spreadDegrees, VS, CE_Utility.GravityConst);
 
                 hitChance = GenText.ToStringByStyle(prob * 100, ToStringStyle.FloatTwo);
             }
