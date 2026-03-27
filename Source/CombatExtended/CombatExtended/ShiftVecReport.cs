@@ -32,6 +32,10 @@ public class ShiftVecReport
                     var cv = new CollisionVertical(cover);
                     var cy_min = Mathf.Max(bounds.min.y, cv.Max);
                     var cy_max = bounds.max.y;
+                    if (cy_max - cy_min < 0) // behind and shorter than cover
+                    {
+                        cy_max = cy_min;
+                    }
                     bounds = new Bounds(new Vector3(bounds.center.x, cy_min + cy_max / 2, bounds.center.z),
                                         new Vector3(bounds.size.x, (cy_max - cy_min), bounds.size.z));
                 }
