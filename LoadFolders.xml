@@ -84,6 +84,7 @@
 		<li IfModActive="ElSov.Beliar">ModPatches/Beliar Xenotype</li>
 		<li IfModActive="Starppole.Beta.AnimeHair1.6">ModPatches/Beta Anime Hair</li>
 		<li IfModActive="Beta.GuPHAA">ModPatches/Beta GnP Hair and Apparel</li>		
+		<li IfModActive="shunter.bettertradersguild">ModPatches/Better Traders Guild</li>
 		<li IfModActive="divineDerivative.AutoWool">ModPatches/Better Wool Production</li>
 		<li IfModActive="RedMattis.Heaven">ModPatches/Big and Small - Heaven and Hell</li>
 		<li IfModActive="RedMattis.BigSmall.MedievalOverhaulFactions">ModPatches/Big and Small - MO</li>
@@ -228,7 +229,7 @@
 		<li IfModActive="TheKingInYellow.Lope">ModPatches/Fuck it Unboomas your Lope</li>
 		<li IfModActive="com.distman.gastrap">ModPatches/Gas Traps and Shells</li>
 		<li IfModActive="hlx.GestaltEngine">ModPatches/Gestalt Engine</li>
-		<li IfModActive="Owlchemist.GiddyUp">ModPatches/Giddy-Up 2</li>
+		<li IfModActive="Owlchemist.GiddyUp,MemeGoddess.GiddyUp">ModPatches/Giddy-Up 2</li>
 		<li IfModActive="Kilo.CapVacHelm">ModPatches/Gravship Captain Set</li>
 		<li IfModActive="tyrannidae.gregnfriends">ModPatches/GREG</li>
 		<li IfModActive="Abrolo.Grimstone.Beasts">ModPatches/Grimstone Beasts</li>
@@ -668,6 +669,7 @@
 		<li IfModActive="OskarPotocki.VanillaFactionsExpanded.SettlersModule">ModPatches/Vanilla Factions Expanded - Settlers</li>
 		<li IfModActive="OskarPotocki.VFE.Tribals">ModPatches/Vanilla Factions Expanded - Tribals</li>
 		<li IfModActive="VanillaExpanded.VFESecurity">ModPatches/Vanilla Furniture Expanded - Security</li>
+		<li IfModActive="VanillaExpanded.VFEFactory">ModPatches/Vanilla Furniture Expanded - Factory</li>
 		<li IfModActive="VanillaExpanded.VGeneticsE">ModPatches/Vanilla Genetics Expanded</li>
 		<li IfModActive="vanillaexpanded.gravship">ModPatches/Vanilla Gravship Expanded - Chapter 1</li>
 		<li IfModActive="VanillaExpanded.Ideo.Dryads">ModPatches/Vanilla Ideology Expanded - Dryads</li>
