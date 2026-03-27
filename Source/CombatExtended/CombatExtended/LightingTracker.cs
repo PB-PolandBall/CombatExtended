@@ -256,7 +256,7 @@ public class LightingTracker : MapComponent
             Array.Fill(coverGridCache, -1f);
             lastCoverTick = thisTick;
         }
-        float coverHeight = coverGridCache[position.x * map.Size.z + position.z];
+        float coverHeight = coverGridCache[CellToIndex(position)];
         if (coverHeight == -1)
         {
             Thing cover = position.GetFirstPawn(map) ?? position.GetCover(map);
@@ -269,7 +269,7 @@ public class LightingTracker : MapComponent
                 Bounds bounds = CE_Utility.GetBoundsFor(cover);
                 coverHeight = bounds.size.y;
             }
-            coverGridCache[position.x * map.Size.z + position.z] = coverHeight;
+            coverGridCache[CellToIndex(position)] = coverHeight;
         }
         return coverHeight;
     }
@@ -283,10 +283,10 @@ public class LightingTracker : MapComponent
             Array.Fill(glowGridCache, -1f);
             lastGlowTick = thisTick;
         }
-        float glow = glowGridCache[source.x * map.Size.z + source.z];
+        float glow = glowGridCache[CellToIndex(source)];
         if (glow == -1)
         {
-            glowGridCache[source.x * map.Size.z + source.z] = glow = map.glowGrid.GroundGlowAt(source);
+            glowGridCache[CellToIndex(source)] = glow = map.glowGrid.GroundGlowAt(source);
         }
         return glow;
     }
