@@ -18,7 +18,8 @@ public class LightingTracker : MapComponent
     private static readonly float[] AdjWeights;
     private readonly float[] glowGridCache;
     private readonly float[] coverGridCache;
-    private int lastTick = 0;
+    private int lastCoverTick = 0;
+    private int lastGlowTick = 0;
 
     static LightingTracker()
     {
@@ -250,11 +251,10 @@ public class LightingTracker : MapComponent
     public float HighestCoverAt(IntVec3 position)
     {
         int thisTick = Find.TickManager.TicksAbs;
-        if (thisTick != lastTick)
+        if (thisTick != lastCoverTick)
         {
             Array.Fill(coverGridCache, -1f);
-            Array.Fill(glowGridCache, -1f);
-            lastTick = thisTick;
+            lastCoverTick = thisTick;
         }
         float coverHeight = coverGridCache[position.x * map.Size.z + position.z];
         if (coverHeight == -1)
@@ -278,11 +278,10 @@ public class LightingTracker : MapComponent
     {
         int thisTick = Find.TickManager.TicksAbs;
 
-        if (thisTick != lastTick)
+        if (thisTick != lastGlowTick)
         {
-            Array.Fill(coverGridCache, -1f);
             Array.Fill(glowGridCache, -1f);
-            lastTick = thisTick;
+            lastGlowTick = thisTick;
         }
         float glow = glowGridCache[source.x * map.Size.z + source.z];
         if (glow == -1)
