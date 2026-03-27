@@ -109,7 +109,7 @@ public static class CE_Math
 
         float cos_theta = Mathf.Cos(shotAngle);
 
-        float sigma_gravity = (gravity * sigma_dist * sigma_dist) / (2 * shotSpeed * shotSpeed * cos_theta * cos_theta);
+        float sigma_gravity = (gravity * dist * sigma_dist) / (2 * shotSpeed * shotSpeed * cos_theta * cos_theta);
         float sigma_vertical = Mathf.Sqrt(sigma_y * sigma_y + sigma_gravity * sigma_gravity);
 
         float half_w = w / 2;
