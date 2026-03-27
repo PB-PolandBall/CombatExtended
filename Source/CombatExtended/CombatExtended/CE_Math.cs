@@ -126,10 +126,10 @@ public static class CE_Math
         {
             // Becaue we might not be shooting at center of visible area, we have to calculate odds of missing high and the odds of missing low.
             // The chance of hitting is the probability of the bullet passing between the upper and lower limit.
-            float upper = (offset + half_h) / sigma_vertical;
-            float lower = (offset - half_h) / sigma_vertical;
+            float higher = (h - offset) / sigma_vertical;
+            float lower = (-offset) / sigma_vertical;
 
-            p_vertical = normal_cdf(upper) - normal_cdf(lower);
+            p_vertical = normal_cdf(higher) - normal_cdf(lower);
         }
         return p_horizontal * p_vertical;
     }
