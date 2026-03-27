@@ -113,7 +113,6 @@ public static class CE_Math
         float sigma_vertical = Mathf.Sqrt(sigma_theta * sigma_theta + sigma_gravity);
 
         float half_w = w / 2;
-        float half_h = h / 2;
         float p_horizontal = 1.0f;
 
         if (sigma_horizontal > 0)
