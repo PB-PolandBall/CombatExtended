@@ -59,6 +59,7 @@
 		<xpath>Defs/ThingDef[@Name="PKCHatMakeableBase"]/statBases/StuffEffectMultiplierArmor</xpath>
 		<value>
 			<StuffEffectMultiplierArmor>2</StuffEffectMultiplierArmor>
+			<Bulk>1</Bulk>
 		</value>
 	</Operation>
 
@@ -67,6 +68,7 @@
 		<xpath>Defs/ThingDef[defName="Apparel_PKCCheckedHood"]/statBases/StuffEffectMultiplierArmor</xpath>
 		<value>
 			<StuffEffectMultiplierArmor>2</StuffEffectMultiplierArmor>
+			<Bulk>1</Bulk>
 		</value>
 	</Operation>
 
@@ -92,5 +94,23 @@
 			<li>Steeled</li>
 		</value>
 	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Apparel_PKCHeroCape"]/statBases/StuffEffectMultiplierArmor</xpath>
+		<value>
+			<StuffEffectMultiplierArmor>1.5</StuffEffectMultiplierArmor>
+			<Bulk>1</Bulk>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Apparel_PKCRaincoat"]/statBases/StuffEffectMultiplierArmor</xpath>
+		<value>
+			<StuffEffectMultiplierArmor>1.5</StuffEffectMultiplierArmor>
+			<Bulk>2</Bulk>
+			<WornBulk>1</WornBulk>
+		</value>
+	</Operation>
+
 
 </Patch>
