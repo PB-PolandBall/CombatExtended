@@ -510,7 +510,8 @@ Rim-Effect: N7	|
 Rimedieval - Medieval Royalty   |
 Rimefeller	|
 Rim-Elves   |
-Rim-Gnoblins	| 
+Rim-Gnoblins	|
+Rim Of Evil: Northern Frontier |
 Rim-Hivers!	|
 Rim Flood	|
 Rim-Robots_	|
