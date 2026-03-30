@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<!-- ========================= -->
+	<!-- Adult Nordberg headgear   -->
+	<!-- ========================= -->
+
+	<!-- Beanies:-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[
+			defName="Apparel_ROE_NordbergBeanieA" or
+			defName="Apparel_ROE_NordbergBeanieB"
+			]/statBases</xpath>
+		<value>
+			<statBases>
+				<WorkToMake>1600</WorkToMake>
+				<MaxHitPoints>95</MaxHitPoints>
+				<Mass>0.30</Mass>
+				<Flammability>0.80</Flammability>
+				<ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+				<ArmorRating_Blunt>0.07</ArmorRating_Blunt>
+				<ArmorRating_Heat>0.03</ArmorRating_Heat>
+				<Insulation_Cold>18</Insulation_Cold>
+				<Insulation_Heat>0</Insulation_Heat>
+				<EquipDelay>0.5</EquipDelay>
+				<Bulk>2</Bulk>
+				<WornBulk>1</WornBulk>
+			</statBases>
+		</value>
+	</Operation>
+
+	<!-- Fur hat:-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergFurHat"]/statBases</xpath>
+		<value>
+			<statBases>
+				<WorkToMake>1700</WorkToMake>
+				<MaxHitPoints>105</MaxHitPoints>
+				<Mass>0.35</Mass>
+				<Flammability>0.80</Flammability>
+				<ArmorRating_Sharp>0.08</ArmorRating_Sharp>
+				<ArmorRating_Blunt>0.10</ArmorRating_Blunt>
+				<ArmorRating_Heat>0.04</ArmorRating_Heat>
+				<Insulation_Cold>22</Insulation_Cold>
+				<Insulation_Heat>0</Insulation_Heat>
+				<EquipDelay>0.5</EquipDelay>
+				<Bulk>2</Bulk>
+				<WornBulk>1</WornBulk>
+			</statBases>
+		</value>
+	</Operation>
+
+	<!-- Adult earmuffs -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergAdultEarmuffs"]/statBases</xpath>
+		<value>
+			<statBases>
+				<WorkToMake>1000</WorkToMake>
+				<MaxHitPoints>60</MaxHitPoints>
+				<Mass>0.05</Mass>
+				<Flammability>0.75</Flammability>
+				<ArmorRating_Sharp>0.02</ArmorRating_Sharp>
+				<ArmorRating_Blunt>0.03</ArmorRating_Blunt>
+				<ArmorRating_Heat>0.02</ArmorRating_Heat>
+				<Insulation_Cold>16</Insulation_Cold>
+				<Insulation_Heat>0</Insulation_Heat>
+				<EquipDelay>0.2</EquipDelay>
+				<Bulk>1</Bulk>
+				<WornBulk>0.5</WornBulk>
+			</statBases>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergAdultEarmuffs"]/equippedStatOffsets</xpath>
+		<value>
+			<equippedStatOffsets>
+				<SocialImpact>0.10</SocialImpact>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<!-- Shawl:-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergShawl"]/statBases</xpath>
+		<value>
+			<statBases>
+				<WorkToMake>1400</WorkToMake>
+				<MaxHitPoints>55</MaxHitPoints>
+				<Mass>0.05</Mass>
+				<Flammability>0.90</Flammability>
+				<ArmorRating_Sharp>0.03</ArmorRating_Sharp>
+				<ArmorRating_Blunt>0.03</ArmorRating_Blunt>
+				<ArmorRating_Heat>0.02</ArmorRating_Heat>
+				<Insulation_Cold>10</Insulation_Cold>
+				<Insulation_Heat>0</Insulation_Heat>
+				<EquipDelay>0.3</EquipDelay>
+				<Bulk>1</Bulk>
+				<WornBulk>0.5</WornBulk>
+			</statBases>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergShawl"]/equippedStatOffsets</xpath>
+		<value>
+			<equippedStatOffsets>
+				<SocialImpact>0.15</SocialImpact>
+				<CookSpeed>0.08</CookSpeed>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<!-- Hunter's Hood:-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergHunterHood"]/statBases</xpath>
+		<value>
+			<statBases>
+				<WorkToMake>2800</WorkToMake>
+				<MaxHitPoints>125</MaxHitPoints>
+				<Mass>0.55</Mass>
+				<Flammability>0.75</Flammability>
+				<ArmorRating_Sharp>0.16</ArmorRating_Sharp>
+				<ArmorRating_Blunt>0.18</ArmorRating_Blunt>
+				<ArmorRating_Heat>0.06</ArmorRating_Heat>
+				<Insulation_Cold>24</Insulation_Cold>
+				<Insulation_Heat>0</Insulation_Heat>
+				<EquipDelay>0.7</EquipDelay>
+				<Bulk>3</Bulk>
+				<WornBulk>1</WornBulk>
+			</statBases>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergHunterHood"]/equippedStatOffsets</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeHitChance>0.04</MeleeHitChance>
+				<ToxicEnvironmentResistance>0.10</ToxicEnvironmentResistance>
+				<HuntingStealth>0.08</HuntingStealth>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<!-- Harpoon bundle:-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Apparel_ROE_HarpoonBag"]/statBases</xpath>
+		<value>
+			<statBases>
+				<MaxHitPoints>65</MaxHitPoints>
+				<WorkToMake>2800</WorkToMake>
+				<Mass>1.2</Mass>
+				<ArmorRating_Sharp>0.02</ArmorRating_Sharp>
+				<ArmorRating_Blunt>0.02</ArmorRating_Blunt>
+				<ArmorRating_Heat>0.01</ArmorRating_Heat>
+				<EquipDelay>0.8</EquipDelay>
+				<Bulk>3</Bulk>
+				<WornBulk>1</WornBulk>
+			</statBases>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Apparel_ROE_HarpoonBag"]/equippedStatOffsets</xpath>
+		<value>
+			<equippedStatOffsets>
+				<RangedCooldownFactor>-0.08</RangedCooldownFactor>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+</Patch>

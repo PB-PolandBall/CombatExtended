@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<!-- ========================= -->
+	<!-- Nordberg child headgear   -->
+	<!-- ========================= -->
+
+	<!-- Basic boys/girls hoods:-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[
+			defName="Apparel_ROE_NordbergBoyHood" or
+			defName="Apparel_ROE_NordbergGirlHood"
+			]/statBases</xpath>
+		<value>
+			<statBases>
+				<WorkToMake>1800</WorkToMake>
+				<MaxHitPoints>90</MaxHitPoints>
+				<Mass>0.25</Mass>
+				<Flammability>0.80</Flammability>
+				<ArmorRating_Sharp>0.06</ArmorRating_Sharp>
+				<ArmorRating_Blunt>0.08</ArmorRating_Blunt>
+				<ArmorRating_Heat>0.04</ArmorRating_Heat>
+				<Insulation_Cold>24</Insulation_Cold>
+				<Insulation_Heat>0</Insulation_Heat>
+				<EquipDelay>0.5</EquipDelay>
+				<Bulk>2</Bulk>
+				<WornBulk>1</WornBulk>
+			</statBases>
+		</value>
+	</Operation>
+
+	<!-- Outcast's Hood:-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergWitchBoyHood"]/statBases</xpath>
+		<value>
+			<statBases>
+				<WorkToMake>2200</WorkToMake>
+				<MaxHitPoints>115</MaxHitPoints>
+				<Mass>0.35</Mass>
+				<Flammability>0.60</Flammability>
+				<ArmorRating_Sharp>0.14</ArmorRating_Sharp>
+				<ArmorRating_Blunt>0.16</ArmorRating_Blunt>
+				<ArmorRating_Heat>0.06</ArmorRating_Heat>
+				<Insulation_Cold>26</Insulation_Cold>
+				<Insulation_Heat>0</Insulation_Heat>
+				<EquipDelay>0.6</EquipDelay>
+				<Bulk>3</Bulk>
+				<WornBulk>1</WornBulk>
+			</statBases>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergWitchBoyHood"]/equippedStatOffsets</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeHitChance>0.04</MeleeHitChance>
+				<PsychicSensitivityOffset>0.02</PsychicSensitivityOffset>
+				<PsychicEntropyRecoveryRate MayRequire="Ludeon.RimWorld.Royalty">0.02</PsychicEntropyRecoveryRate>
+				<SocialImpact>-0.08</SocialImpact>
+				<ToxicEnvironmentResistance>0.10</ToxicEnvironmentResistance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<!-- Child earmuffs:-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergEarmuffs"]/statBases</xpath>
+		<value>
+			<statBases>
+				<WorkToMake>900</WorkToMake>
+				<MaxHitPoints>55</MaxHitPoints>
+				<Mass>0.05</Mass>
+				<Flammability>0.75</Flammability>
+				<ArmorRating_Sharp>0.02</ArmorRating_Sharp>
+				<ArmorRating_Blunt>0.03</ArmorRating_Blunt>
+				<ArmorRating_Heat>0.02</ArmorRating_Heat>
+				<Insulation_Cold>14</Insulation_Cold>
+				<Insulation_Heat>0</Insulation_Heat>
+				<EquipDelay>0.2</EquipDelay>
+				<Bulk>1</Bulk>
+				<WornBulk>0.5</WornBulk>
+			</statBases>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergEarmuffs"]/equippedStatOffsets</xpath>
+		<value>
+			<equippedStatOffsets>
+				<SocialImpact>0.08</SocialImpact>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+</Patch>

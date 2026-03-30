@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<!-- ========================= -->
+	<!-- Adult Nordberg parkas     -->
+	<!-- ========================= -->
+
+	<!-- Basic Nordberg fur parkas:-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[
+			defName="Apparel_ROE_NordbergA" or
+			defName="Apparel_ROE_NordbergB"
+			]/statBases</xpath>
+		<value>
+			<statBases>
+				<WorkToMake>7000</WorkToMake>
+				<MaxHitPoints>135</MaxHitPoints>
+				<Mass>3.6</Mass>
+				<Flammability>0.80</Flammability>
+				<ArmorRating_Sharp>0.12</ArmorRating_Sharp>
+				<ArmorRating_Blunt>0.16</ArmorRating_Blunt>
+				<ArmorRating_Heat>0.08</ArmorRating_Heat>
+				<Insulation_Cold>56</Insulation_Cold>
+				<Insulation_Heat>0</Insulation_Heat>
+				<EquipDelay>2.8</EquipDelay>
+				<Bulk>14</Bulk>
+				<WornBulk>3</WornBulk>
+			</statBases>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[
+			defName="Apparel_ROE_NordbergA" or
+			defName="Apparel_ROE_NordbergB"
+			]/equippedStatOffsets</xpath>
+		<value>
+			<equippedStatOffsets>
+				<WorkSpeedGlobal>0.05</WorkSpeedGlobal>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[
+			defName="Apparel_ROE_NordbergA" or
+			defName="Apparel_ROE_NordbergB"
+			]/thingCategories</xpath>
+		<value>
+			<thingCategories>
+				<li>Apparel</li>
+			</thingCategories>
+		</value>
+	</Operation>
+
+
+	<!-- Hunter's Parka:-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergHunter"]/statBases</xpath>
+		<value>
+			<statBases>
+				<WorkToMake>9000</WorkToMake>
+				<MaxHitPoints>190</MaxHitPoints>
+				<Mass>5.2</Mass>
+				<Flammability>0.70</Flammability>
+				<ArmorRating_Sharp>0.26</ArmorRating_Sharp>
+				<ArmorRating_Blunt>0.28</ArmorRating_Blunt>
+				<ArmorRating_Heat>0.10</ArmorRating_Heat>
+				<Insulation_Cold>62</Insulation_Cold>
+				<Insulation_Heat>-4</Insulation_Heat>
+				<EquipDelay>3.4</EquipDelay>
+				<Bulk>18</Bulk>
+				<WornBulk>4</WornBulk>
+			</statBases>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergHunter"]/equippedStatOffsets</xpath>
+		<value>
+			<equippedStatOffsets>
+				<ButcheryFleshSpeed>0.15</ButcheryFleshSpeed>
+				<ButcheryFleshEfficiency>0.04</ButcheryFleshEfficiency>
+				<ButcheryMechanoidSpeed>0.05</ButcheryMechanoidSpeed>
+				<PainShockThreshold>0.04</PainShockThreshold>
+				<MeleeDodgeChance>-0.04</MeleeDodgeChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergHunter"]/thingCategories</xpath>
+		<value>
+			<thingCategories>
+				<li>ApparelArmor</li>
+			</thingCategories>
+		</value>
+	</Operation>
+
+
+	<!-- Northern Mistress Dress:-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergMistress"]/statBases</xpath>
+		<value>
+			<statBases>
+				<WorkToMake>8000</WorkToMake>
+				<MaxHitPoints>95</MaxHitPoints>
+				<Mass>1.2</Mass>
+				<Flammability>0.90</Flammability>
+				<ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+				<ArmorRating_Blunt>0.08</ArmorRating_Blunt>
+				<ArmorRating_Heat>0.03</ArmorRating_Heat>
+				<Insulation_Cold>10</Insulation_Cold>
+				<Insulation_Heat>0</Insulation_Heat>
+				<EquipDelay>1.8</EquipDelay>
+				<Bulk>6</Bulk>
+				<WornBulk>1</WornBulk>
+			</statBases>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergMistress"]/equippedStatOffsets</xpath>
+		<value>
+			<equippedStatOffsets>
+				<SocialImpact>0.12</SocialImpact>
+				<PainShockThreshold>0.05</PainShockThreshold>
+				<MeleeHitChance>0.02</MeleeHitChance>
+				<PawnBeauty>1</PawnBeauty>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergMistress"]/thingCategories</xpath>
+		<value>
+			<thingCategories>
+				<li>Apparel</li>
+			</thingCategories>
+		</value>
+	</Operation>
+
+</Patch>

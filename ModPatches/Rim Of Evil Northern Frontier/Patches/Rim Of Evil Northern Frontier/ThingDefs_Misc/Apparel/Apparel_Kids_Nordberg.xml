@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<!-- ========================= -->
+	<!-- Nordberg child parkas     -->
+	<!-- ========================= -->
+
+	<!-- Basic boy/girl parkas: -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[
+			defName="Apparel_ROE_NordbergBoy" or
+			defName="Apparel_ROE_NordbergGirl"
+			]/statBases</xpath>
+		<value>
+			<statBases>
+				<WorkToMake>5000</WorkToMake>
+				<MaxHitPoints>110</MaxHitPoints>
+				<Mass>2.2</Mass>
+				<Flammability>0.85</Flammability>
+				<ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+				<ArmorRating_Blunt>0.12</ArmorRating_Blunt>
+				<ArmorRating_Heat>0.08</ArmorRating_Heat>
+				<Insulation_Cold>42</Insulation_Cold>
+				<Insulation_Heat>0</Insulation_Heat>
+				<EquipDelay>2.5</EquipDelay>
+				<Bulk>10</Bulk>
+				<WornBulk>2</WornBulk>
+			</statBases>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[
+			defName="Apparel_ROE_NordbergBoy" or
+			defName="Apparel_ROE_NordbergGirl"
+			]/equippedStatOffsets</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MoveSpeed>0.04</MoveSpeed>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[
+			defName="Apparel_ROE_NordbergBoy" or
+			defName="Apparel_ROE_NordbergGirl"
+			]/thingCategories</xpath>
+		<value>
+			<thingCategories>
+				<li>Apparel</li>
+			</thingCategories>
+		</value>
+	</Operation>
+
+
+	<!-- Fancy girls parka: -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergWitchGirl"]/statBases</xpath>
+		<value>
+			<statBases>
+				<WorkToMake>5500</WorkToMake>
+				<MaxHitPoints>120</MaxHitPoints>
+				<Mass>2.3</Mass>
+				<Flammability>0.80</Flammability>
+				<ArmorRating_Sharp>0.11</ArmorRating_Sharp>
+				<ArmorRating_Blunt>0.14</ArmorRating_Blunt>
+				<ArmorRating_Heat>0.08</ArmorRating_Heat>
+				<Insulation_Cold>44</Insulation_Cold>
+				<Insulation_Heat>0</Insulation_Heat>
+				<EquipDelay>2.5</EquipDelay>
+				<Bulk>10</Bulk>
+				<WornBulk>2</WornBulk>
+			</statBases>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergWitchGirl"]/equippedStatOffsets</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MoveSpeed>0.05</MoveSpeed>
+				<SocialImpact>0.10</SocialImpact>
+				<ForagedNutritionPerDay>0.10</ForagedNutritionPerDay>
+				<CookSpeed>0.05</CookSpeed>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergWitchGirl"]/thingCategories</xpath>
+		<value>
+			<thingCategories>
+				<li>Apparel</li>
+			</thingCategories>
+		</value>
+	</Operation>
+
+
+	<!-- Outcast's Parka:-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergWitchBoy"]/statBases</xpath>
+		<value>
+			<statBases>
+				<WorkToMake>7000</WorkToMake>
+				<MaxHitPoints>155</MaxHitPoints>
+				<Mass>2.6</Mass>
+				<Flammability>0.55</Flammability>
+				<ArmorRating_Sharp>0.24</ArmorRating_Sharp>
+				<ArmorRating_Blunt>0.24</ArmorRating_Blunt>
+				<ArmorRating_Heat>0.10</ArmorRating_Heat>
+				<Insulation_Cold>48</Insulation_Cold>
+				<Insulation_Heat>0</Insulation_Heat>
+				<EquipDelay>2.7</EquipDelay>
+				<Bulk>12</Bulk>
+				<WornBulk>3</WornBulk>
+			</statBases>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergWitchBoy"]/equippedStatOffsets</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MoveSpeed>0.08</MoveSpeed>
+				<PsychicSensitivityOffset>0.04</PsychicSensitivityOffset>
+				<PsychicEntropyRecoveryRate MayRequire="Ludeon.RimWorld.Royalty">0.008</PsychicEntropyRecoveryRate>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergWitchBoy"]/thingCategories</xpath>
+		<value>
+			<thingCategories>
+				<li>ApparelArmor</li>
+			</thingCategories>
+		</value>
+	</Operation>
+
+</Patch>

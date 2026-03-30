@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<!-- ========================= -->
+	<!-- Nordberg lanterns         -->
+	<!-- ========================= -->
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[
+			defName="Apparel_ROE_LanternA" or
+			defName="Apparel_ROE_LanternB"
+			]/statBases</xpath>
+		<value>
+			<Bulk>2</Bulk>
+			<WornBulk>1</WornBulk>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Apparel_ROE_LanternA"]/equippedStatOffsets</xpath>
+		<value>
+			<equippedStatOffsets>
+				<LearningRateFactor MayRequire="Ludeon.RimWorld.Biotech">0.1</LearningRateFactor>
+				<AimingAccuracy>-0.04</AimingAccuracy>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Apparel_ROE_LanternB"]/equippedStatOffsets</xpath>
+		<value>
+			<equippedStatOffsets>
+				<LearningRateFactor MayRequire="Ludeon.RimWorld.Biotech">0.1</LearningRateFactor>
+				<AimingAccuracy>-0.04</AimingAccuracy>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+</Patch>
