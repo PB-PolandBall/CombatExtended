@@ -2,7 +2,7 @@
 <Patch>
 
 	<!-- ========================= -->
-	<!-- Nordberg melee            -->
+	<!-- Nordberg melee           -->
 	<!-- ========================= -->
 
 	<!-- Hunter's Club -->
@@ -14,12 +14,19 @@
 		</value>
 	</Operation>
 
-	<Operation Class="PatchOperationAdd">
+	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="MeleeWeapon_ROE_HuntersClub"]/equippedStatOffsets</xpath>
 		<value>
-			<MeleeCritChance>0.22</MeleeCritChance>
-			<MeleeParryChance>0.16</MeleeParryChance>
-			<MeleeDodgeChance>0.08</MeleeDodgeChance>
+			<equippedStatOffsets>
+				<ArrestSuccessChance>0.01</ArrestSuccessChance>
+				<AnimalGatherSpeed>0.02</AnimalGatherSpeed>
+				<TameAnimalChance>0.02</TameAnimalChance>
+				<TrainAnimalChance>0.02</TrainAnimalChance>
+				<BondAnimalChanceFactor>-0.05</BondAnimalChanceFactor>
+				<MeleeCritChance>0.22</MeleeCritChance>
+				<MeleeParryChance>0.16</MeleeParryChance>
+				<MeleeDodgeChance>0.08</MeleeDodgeChance>
+			</equippedStatOffsets>
 		</value>
 	</Operation>
 
