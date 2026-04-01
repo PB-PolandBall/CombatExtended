@@ -146,7 +146,7 @@
 		<harmsHealth>false</harmsHealth>
 		<additionalHediffs>
 			<li>
-				<hediff>Anesthetic</hediff>
+				<hediff>Neuralizer</hediff>
 				<severityPerDamageDealt>0.15</severityPerDamageDealt>
 				<victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
 			</li>
