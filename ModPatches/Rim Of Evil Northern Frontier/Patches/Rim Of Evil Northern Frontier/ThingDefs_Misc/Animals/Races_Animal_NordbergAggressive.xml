@@ -140,7 +140,7 @@
 		</value>
 	</Operation>
 
-
+	<!-- Alpha Wolf -->
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>Defs/ThingDef[@Name="ThingBaseWolfNordbergAlpha"]</xpath>
 		<value>

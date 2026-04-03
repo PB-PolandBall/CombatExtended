@@ -7,10 +7,7 @@
 
 	<!-- Basic boys/girls hoods:-->
 	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[
-			defName="Apparel_ROE_NordbergBoyHood" or
-			defName="Apparel_ROE_NordbergGirlHood"
-			]/statBases</xpath>
+		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergBoyHood" or defName="Apparel_ROE_NordbergGirlHood"]/statBases</xpath>
 		<value>
 			<statBases>
 				<WorkToMake>1800</WorkToMake>

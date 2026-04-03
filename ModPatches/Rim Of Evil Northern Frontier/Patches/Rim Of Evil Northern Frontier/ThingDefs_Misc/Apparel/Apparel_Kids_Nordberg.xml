@@ -7,10 +7,7 @@
 
 	<!-- Basic boy/girl parkas: -->
 	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[
-			defName="Apparel_ROE_NordbergBoy" or
-			defName="Apparel_ROE_NordbergGirl"
-			]/statBases</xpath>
+		<xpath>Defs/ThingDef[	defName="Apparel_ROE_NordbergBoy" or defName="Apparel_ROE_NordbergGirl"]/statBases</xpath>
 		<value>
 			<statBases>
 				<WorkToMake>5000</WorkToMake>
@@ -30,10 +27,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[
-			defName="Apparel_ROE_NordbergBoy" or
-			defName="Apparel_ROE_NordbergGirl"
-			]/equippedStatOffsets</xpath>
+		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergBoy" or defName="Apparel_ROE_NordbergGirl"]/equippedStatOffsets</xpath>
 		<value>
 			<equippedStatOffsets>
 				<MoveSpeed>0.04</MoveSpeed>
@@ -42,17 +36,13 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[
-			defName="Apparel_ROE_NordbergBoy" or
-			defName="Apparel_ROE_NordbergGirl"
-			]/thingCategories</xpath>
+		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergBoy" or defName="Apparel_ROE_NordbergGirl"]/thingCategories</xpath>
 		<value>
 			<thingCategories>
 				<li>Apparel</li>
 			</thingCategories>
 		</value>
 	</Operation>
-
 
 	<!-- Fancy girls parka: -->
 	<Operation Class="PatchOperationReplace">
@@ -95,7 +85,6 @@
 			</thingCategories>
 		</value>
 	</Operation>
-
 
 	<!-- Outcast's Parka:-->
 	<Operation Class="PatchOperationReplace">

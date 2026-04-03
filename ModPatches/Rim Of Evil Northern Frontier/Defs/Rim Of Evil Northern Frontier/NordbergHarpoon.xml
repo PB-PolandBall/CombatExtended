@@ -9,7 +9,6 @@
 		<description>A large throwing harpoon used by northern hunters to wound and bleed larger prey.</description>
 	</CombatExtended.AmmoCategoryDef>
 
-
 	<!-- ==================== Ammo Set ========================= -->
 
 	<CombatExtended.AmmoSetDef>
@@ -19,7 +18,6 @@
 			<Nordberg_ROE_Harpoon>NordbergHarpoon_Thrown</Nordberg_ROE_Harpoon>
 		</ammoTypes>
 	</CombatExtended.AmmoSetDef>
-
 
 	<!-- ==================== Recipe =========================== -->
 

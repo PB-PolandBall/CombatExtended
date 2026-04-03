@@ -7,10 +7,7 @@
 
 	<!-- Basic Nordberg fur parkas:-->
 	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[
-			defName="Apparel_ROE_NordbergA" or
-			defName="Apparel_ROE_NordbergB"
-			]/statBases</xpath>
+		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergA" or defName="Apparel_ROE_NordbergB"statBases</xpath>
 		<value>
 			<statBases>
 				<WorkToMake>7000</WorkToMake>
@@ -30,10 +27,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[
-			defName="Apparel_ROE_NordbergA" or
-			defName="Apparel_ROE_NordbergB"
-			]/equippedStatOffsets</xpath>
+		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergA" or defName="Apparel_ROE_NordbergB"]/equippedStatOffsets</xpath>
 		<value>
 			<equippedStatOffsets>
 				<WorkSpeedGlobal>0.05</WorkSpeedGlobal>
@@ -42,17 +36,13 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[
-			defName="Apparel_ROE_NordbergA" or
-			defName="Apparel_ROE_NordbergB"
-			]/thingCategories</xpath>
+		<xpath>Defs/ThingDef[	defName="Apparel_ROE_NordbergA" or defName="Apparel_ROE_NordbergB"]/thingCategories</xpath>
 		<value>
 			<thingCategories>
 				<li>Apparel</li>
 			</thingCategories>
 		</value>
 	</Operation>
-
 
 	<!-- Hunter's Parka:-->
 	<Operation Class="PatchOperationReplace">
@@ -96,7 +86,6 @@
 			</thingCategories>
 		</value>
 	</Operation>
-
 
 	<!-- Northern Mistress Dress:-->
 	<Operation Class="PatchOperationReplace">
