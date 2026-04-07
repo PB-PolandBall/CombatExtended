@@ -606,7 +606,7 @@ public class Verb_MeleeAttackCE : Verb_MeleeAttack
                     break;
             }
         }
-        
+
         return chance;
     }
 
