@@ -24,7 +24,7 @@ public class PatchOperationSettingsConditional : PatchOperation
             Log.Error($"[Combat Extended] Setting field named {settingName} is not a bool");
             return false;
         }
-        
+
         if ((bool)settingRef.GetValue(Controller.settings)) //1-to-1 copy of vanilla conditional patch op
         {
             if (match != null)
