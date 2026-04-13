@@ -215,6 +215,7 @@ public class Settings : ModSettings, ISettingsCE
         Scribe_Values.Look(ref showExtraStats, "showExtraStats", false);
         Scribe_Values.Look(ref variedHumanHeight, "variedHumanHeight", false);
         Scribe_Values.Look(ref logUnpatchedDefs, "logUnpatchedDefs", false);
+        Scribe_Values.Look(ref realWeaponNames, "realWeaponNames", true);
 
 #if DEBUG
         // Debug settings
@@ -589,6 +590,7 @@ public class Settings : ModSettings, ISettingsCE
         enablePawnKindAutopatcher = true;
         variedHumanHeight = false;
         logUnpatchedDefs = false;
+        realWeaponNames = true;
 
 #if DEBUG
         debuggingMode = false;
