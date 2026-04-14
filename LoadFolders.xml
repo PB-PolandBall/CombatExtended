@@ -68,6 +68,7 @@
 		<li IfModActive="Mlie.ArchotechPlus">ModPatches/Archotech+</li>
 		<li IfModActive="Mlie.ArgoniansofBlackmarsh">ModPatches/Argonians of Blackmarsh</li>
 		<li IfModActive="Neronix17.Asimov">ModPatches/Asimov</li>
+		<li IfModActive="lts.AG">ModPatches/Astrofuel gear</li>
 		<li IfModActive="Mlie.ArrowPlease">ModPatches/Arrow Please</li>
 		<li IfModActive="Greiger.AsperoRace">ModPatches/Aspero Race</li>
 		<li IfModActive="Roskii.Astoriel">ModPatches/Astoriel Legacy</li>
@@ -228,7 +229,7 @@
 		<li IfModActive="Mlie.FrontlineTrenches">ModPatches/Frontline - Trenches</li>
 		<li IfModActive="TheKingInYellow.Lope">ModPatches/Fuck it Unboomas your Lope</li>
 		<li IfModActive="com.distman.gastrap">ModPatches/Gas Traps and Shells</li>
-		<li IfModActive="hlx.GestaltEngine">ModPatches/Gestalt Engine</li>
+		<li IfModActive="Mlie.GestaltEngine,hlx.GestaltEngine">ModPatches/Gestalt Engine</li>
 		<li IfModActive="Owlchemist.GiddyUp,MemeGoddess.GiddyUp">ModPatches/Giddy-Up 2</li>
 		<li IfModActive="Kilo.CapVacHelm">ModPatches/Gravship Captain Set</li>
 		<li IfModActive="tyrannidae.gregnfriends">ModPatches/GREG</li>
@@ -449,6 +450,7 @@
 		<li IfModActive="Vanya.Polarisbloc.CoreLab,Vanya.Polarisbloc.CoreLab.tmp">ModPatches/Polarisbloc Core Lab</li>
 		<li IfModActive="Vanya.Polarisbloc.SecurityForce,Vanya.Polarisbloc.SecurityForce.tmp">ModPatches/Polarisbloc Security Force</li>
 		<li IfModActive="milk.poleepkwaupdate, GHOST.Poleepkwa">ModPatches/Poleepkwa Race</li>
+		<li IfModActive="ponpeco.KidsClothes">ModPatches/Ponpeco Kids Clothes</li>
 		<li IfModActive="BotchJob.PossessedWeapons">ModPatches/Possessed Weapons</li>
 		<li IfModActive="JangoDsoul.T45b.PowerArmor">ModPatches/PowerArmour T-45b</li>
 		<li IfModActive="pphhyy.DemigryphsMod">ModPatches/pphhyy Demigryph</li>
