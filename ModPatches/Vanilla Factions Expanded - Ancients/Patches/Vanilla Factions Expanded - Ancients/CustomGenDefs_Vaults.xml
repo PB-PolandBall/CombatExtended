@@ -4,7 +4,7 @@
 	<!-- I'm not sure if this works, and it's probably very fragile. -->
 
 	<Operation Class="CombatExtended.PatchOperationSettingsConditional">
-		<settingName>genericammo</settingName>
+		<settingName>genericAmmo</settingName>
 		<nomatch Class="PatchOperationReplace">
 			<xpath>Defs/KCSG.StructureLayoutDef[defName="VFEA_SealedVaultAlpha"]/layouts/li[1]/li[66]</xpath>
 			<value>
@@ -20,7 +20,7 @@
 	</Operation>
 
 	<Operation Class="CombatExtended.PatchOperationSettingsConditional">
-		<settingName>genericammo</settingName>
+		<settingName>genericAmmo</settingName>
 		<nomatch Class="PatchOperationReplace">
 			<xpath>Defs/KCSG.StructureLayoutDef[defName="VFEA_SealedVaultBravo"]/layouts/li[1]/li[14]</xpath>
 			<value>
@@ -36,7 +36,7 @@
 	</Operation>
 
 	<Operation Class="CombatExtended.PatchOperationSettingsConditional">
-		<settingName>genericammo</settingName>
+		<settingName>genericAmmo</settingName>
 		<nomatch Class="PatchOperationReplace">
 			<xpath>Defs/KCSG.StructureLayoutDef[defName="VFEA_SealedVaultCharlie"]/layouts/li[1]/li[10]</xpath>
 			<value>
@@ -52,7 +52,7 @@
 	</Operation>
 
 	<Operation Class="CombatExtended.PatchOperationSettingsConditional">
-		<settingName>genericammo</settingName>
+		<settingName>genericAmmo</settingName>
 		<nomatch Class="PatchOperationReplace">
 			<xpath>Defs/KCSG.StructureLayoutDef[defName="VFEA_SealedVaultDelta"]/layouts/li[1]/li[19]</xpath>
 			<value>
@@ -68,7 +68,7 @@
 	</Operation>
 
 	<Operation Class="CombatExtended.PatchOperationSettingsConditional">
-		<settingName>genericammo</settingName>
+		<settingName>genericAmmo</settingName>
 		<nomatch Class="PatchOperationReplace">
 			<xpath>Defs/KCSG.StructureLayoutDef[defName="VFEA_SealedVaultF"]/layouts/li[1]/li[35]</xpath>
 			<value>
@@ -84,7 +84,7 @@
 	</Operation>
 
 	<Operation Class="CombatExtended.PatchOperationSettingsConditional">
-		<settingName>genericammo</settingName>
+		<settingName>genericAmmo</settingName>
 		<nomatch Class="PatchOperationReplace">
 			<xpath>Defs/KCSG.StructureLayoutDef[defName="VFEA_SealedVaultG"]/layouts/li[1]/li[23]</xpath>
 			<value>
@@ -100,7 +100,7 @@
 	</Operation>
 
 	<Operation Class="CombatExtended.PatchOperationSettingsConditional">
-		<settingName>genericammo</settingName>
+		<settingName>genericAmmo</settingName>
 		<nomatch Class="PatchOperationReplace">
 			<xpath>Defs/KCSG.StructureLayoutDef[defName="VFEA_SealedVaultH"]/layouts/li[1]/li[31]</xpath>
 			<value>
@@ -116,7 +116,7 @@
 	</Operation>
 
 	<Operation Class="CombatExtended.PatchOperationSettingsConditional">
-		<settingName>genericammo</settingName>
+		<settingName>genericAmmo</settingName>
 		<nomatch Class="PatchOperationReplace">
 			<xpath>Defs/KCSG.StructureLayoutDef[defName="VFEA_SealedVaultH"]/layouts/li[1]/li[35]</xpath>
 			<value>
@@ -132,7 +132,7 @@
 	</Operation>
 
 	<Operation Class="CombatExtended.PatchOperationSettingsConditional">
-		<settingName>genericammo</settingName>
+		<settingName>genericAmmo</settingName>
 		<nomatch Class="PatchOperationReplace">
 			<xpath>Defs/KCSG.StructureLayoutDef[defName="VFEA_SealedVaultI"]/layouts/li[1]/li[19]</xpath>
 			<value>
@@ -148,7 +148,7 @@
 	</Operation>
 
 	<Operation Class="CombatExtended.PatchOperationSettingsConditional">
-		<settingName>genericammo</settingName>
+		<settingName>genericAmmo</settingName>
 		<nomatch Class="PatchOperationReplace">
 			<xpath>Defs/KCSG.StructureLayoutDef[defName="VFEA_SealedVaultJ"]/layouts/li[1]/li[35]</xpath>
 			<value>
@@ -164,7 +164,7 @@
 	</Operation>
 
 	<Operation Class="CombatExtended.PatchOperationSettingsConditional">
-		<settingName>genericammo</settingName>
+		<settingName>genericAmmo</settingName>
 		<nomatch Class="PatchOperationReplace">
 			<xpath>Defs/KCSG.StructureLayoutDef[defName="VFEA_SealedVaultJ"]/layouts/li[1]/li[36]</xpath>
 			<value>
@@ -180,7 +180,7 @@
 	</Operation>
 
 	<Operation Class="CombatExtended.PatchOperationSettingsConditional">
-		<settingName>genericammo</settingName>
+		<settingName>genericAmmo</settingName>
 		<nomatch Class="PatchOperationReplace">
 			<xpath>Defs/KCSG.StructureLayoutDef[defName="VFEA_SealedVaultJ"]/layouts/li[1]/li[36]</xpath>
 			<value>
