@@ -68,6 +68,7 @@
 		<li IfModActive="Mlie.ArchotechPlus">ModPatches/Archotech+</li>
 		<li IfModActive="Mlie.ArgoniansofBlackmarsh">ModPatches/Argonians of Blackmarsh</li>
 		<li IfModActive="Neronix17.Asimov">ModPatches/Asimov</li>
+		<li IfModActive="lts.AG">ModPatches/Astrofuel gear</li>
 		<li IfModActive="Mlie.ArrowPlease">ModPatches/Arrow Please</li>
 		<li IfModActive="Greiger.AsperoRace">ModPatches/Aspero Race</li>
 		<li IfModActive="Roskii.Astoriel">ModPatches/Astoriel Legacy</li>
@@ -693,6 +694,7 @@
 		<li IfModActive="vanillaracesexpanded.insector">ModPatches/Vanilla Races Expanded - Insector</li>
 		<li IfModActive="vanillaracesexpanded.lycanthrope">ModPatches/Vanilla Races Expanded - Lycanthrope</li>
 		<li IfModActive="vanillaracesexpanded.phytokin">ModPatches/Vanilla Races Expanded - Phytokin</li>
+		<li IfModActive="vanillaracesexpanded.pigskin">ModPatches/Vanilla Races Expanded - Pigskin</li>
 		<li IfModActive="vanillaracesexpanded.sanguophage">ModPatches/Vanilla Races Expanded - Sanguophage</li>
 		<li IfModActive="vanillaracesexpanded.saurid">ModPatches/Vanilla Races Expanded - Saurid</li>
 		<li IfModActive="vanillaracesexpanded.waster">ModPatches/Vanilla Races Expanded - Waster</li>

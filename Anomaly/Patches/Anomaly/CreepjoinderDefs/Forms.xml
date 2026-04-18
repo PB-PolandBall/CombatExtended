@@ -14,7 +14,7 @@
 	</Operation>
 
 	<Operation Class="CombatExtended.PatchOperationSettingsConditional">
-		<settingName>genericammo</settingName>
+		<settingName>genericAmmo</settingName>
 		<nomatch Class="PatchOperationAdd">
 			<xpath>Defs/CreepJoinerFormKindDef[defName="LeatheryStranger"]</xpath>
 			<value>
@@ -70,7 +70,7 @@
 	</Operation>
 
 	<Operation Class="CombatExtended.PatchOperationSettingsConditional">
-		<settingName>genericammo</settingName>
+		<settingName>genericAmmo</settingName>
 		<nomatch Class="PatchOperationAdd">
 			<xpath>Defs/CreepJoinerFormKindDef[defName="DealMaker"]</xpath>
 			<value>
@@ -133,7 +133,7 @@
 	</Operation>
 
 	<Operation Class="CombatExtended.PatchOperationSettingsConditional">
-		<settingName>genericammo</settingName>
+		<settingName>genericAmmo</settingName>
 		<nomatch Class="PatchOperationAdd">
 			<xpath>Defs/CreepJoinerFormKindDef[defName="LoneGenius"]</xpath>
 			<value>

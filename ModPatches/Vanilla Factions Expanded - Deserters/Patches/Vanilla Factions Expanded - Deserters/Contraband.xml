@@ -4,7 +4,7 @@
 	<!-- Allow ammo for Empire/Deserter weapons to be purchased using intel. -->
 
 	<Operation Class="CombatExtended.PatchOperationSettingsConditional">
-		<settingName>genericammo</settingName>
+		<settingName>genericAmmo</settingName>
 		<nomatch Class="PatchOperationAddModExtension">
 			<xpath>Defs/ThingDef[defName="Ammo_6x24mmCharged"]</xpath>
 			<value>
@@ -30,7 +30,7 @@
 	</Operation>
 
 	<Operation Class="CombatExtended.PatchOperationSettingsConditional">
-		<settingName>genericammo</settingName>
+		<settingName>genericAmmo</settingName>
 		<nomatch Class="PatchOperationAddModExtension">
 			<xpath>Defs/ThingDef[defName="Ammo_6x24mmCharged_AP"]</xpath>
 			<value>
@@ -56,7 +56,7 @@
 	</Operation>
 
 	<Operation Class="CombatExtended.PatchOperationSettingsConditional">
-		<settingName>genericammo</settingName>
+		<settingName>genericAmmo</settingName>
 		<nomatch Class="PatchOperationAddModExtension">
 			<xpath>Defs/ThingDef[defName="Ammo_6x24mmCharged_Ion"]</xpath>
 			<value>
@@ -100,7 +100,7 @@
 	</Operation>
 
 	<Operation Class="CombatExtended.PatchOperationSettingsConditional">
-		<settingName>genericammo</settingName>
+		<settingName>genericAmmo</settingName>
 		<nomatch Class="PatchOperationAddModExtension">
 			<xpath>Defs/ThingDef[defName="Ammo_8x50mmCharged"]</xpath>
 			<value>
@@ -115,7 +115,7 @@
 	</Operation>
 
 	<Operation Class="CombatExtended.PatchOperationSettingsConditional">
-		<settingName>genericammo</settingName>
+		<settingName>genericAmmo</settingName>
 		<nomatch Class="PatchOperationAddModExtension">
 			<xpath>Defs/ThingDef[defName="Ammo_8x50mmCharged_AP"]</xpath>
 			<value>
@@ -130,7 +130,7 @@
 	</Operation>
 
 	<Operation Class="CombatExtended.PatchOperationSettingsConditional">
-		<settingName>genericammo</settingName>
+		<settingName>genericAmmo</settingName>
 		<nomatch Class="PatchOperationAddModExtension">
 			<xpath>Defs/ThingDef[defName="Ammo_8x50mmCharged_Ion"]</xpath>
 			<value>

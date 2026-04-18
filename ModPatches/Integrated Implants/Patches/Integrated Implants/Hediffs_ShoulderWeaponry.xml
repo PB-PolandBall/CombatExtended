@@ -62,7 +62,7 @@
 	</Operation>
 
 	<Operation Class="CombatExtended.PatchOperationSettingsConditional">
-		<settingName>genericammo</settingName>
+		<settingName>genericAmmo</settingName>
 		<nomatch Class="PatchOperationReplace">
 		<xpath>Defs/AbilityDef[defName="LTS_ShoulderMortar"]/comps/li[@Class="LTS_Implants.LTS_CompProperties_AbilityReloadable"]</xpath>
 			<value>
