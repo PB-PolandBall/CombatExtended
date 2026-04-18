@@ -614,8 +614,8 @@
 			<drawSize>0.8</drawSize>
 		</graphicData>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageDef>Neuralizer_weak</damageDef>
-			<damageAmountBase>6</damageAmountBase>
+			<damageDef>Neuralizer</damageDef>
+			<damageAmountBase>1</damageAmountBase>
 			<speed>20</speed>
 		</projectile>
 	</ThingDef>
@@ -626,8 +626,8 @@
 			<texPath>OuterRim/Projectile/Proj_StunPulse</texPath>
 		</graphicData>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageDef>Neuralizer_weak</damageDef>
-			<damageAmountBase>10</damageAmountBase>
+			<damageDef>Neuralizer</damageDef>
+			<damageAmountBase>1.5</damageAmountBase>
 			<speed>25</speed>
 		</projectile>
 	</ThingDef>
@@ -639,8 +639,8 @@
 			<drawSize>1.2</drawSize>
 		</graphicData>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageDef>Neuralizer_weak</damageDef>
-			<damageAmountBase>14</damageAmountBase>
+			<damageDef>Neuralizer</damageDef>
+			<damageAmountBase>2</damageAmountBase>
 			<speed>30</speed>
 		</projectile>
 	</ThingDef>
