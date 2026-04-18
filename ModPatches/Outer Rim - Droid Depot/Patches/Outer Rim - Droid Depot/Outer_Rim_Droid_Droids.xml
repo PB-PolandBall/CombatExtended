@@ -16,11 +16,12 @@
 			<MeleeDodgeChance>1</MeleeDodgeChance>
 			<MeleeCritChance>1</MeleeCritChance>
 			<MeleeParryChance>1</MeleeParryChance>
+			<SmokeSensitivity>0</SmokeSensitivity>
 		</value>
 	</Operation>
 
 	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/Asimov.PawnDef[@Name="OuterRim_BaseHumanoidDroid" or @Name="BaseAnimalDroid"]/statBases</xpath>
+		<xpath>Defs/ThingDef[@Name="BaseAnimalDroid"]/statBases</xpath>
 		<value>
 			<SmokeSensitivity>0</SmokeSensitivity>
 		</value>
@@ -29,16 +30,16 @@
 	<!-- give all basic humanoid droids the same basic tool set -->
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/Asimov.PawnDef[
-				defName="OuterRim_BattleDroid" or
-				defName="OuterRim_BattleDroidAdvanced" or
-				defName="OuterRim_MagnaGuardDroid" or
-				defName="OuterRim_ProtocolDroid" or
-				defName="OuterRim_CommandoDroid" or
-				defName="OuterRim_HKDroid" or
-				defName="OuterRim_SuperTacticalDroid" or
-				defName="OuterRim_TacticalDroid" or
-				defName="OuterRim_DUMDroid"
-				]/tools</xpath>
+			defName="OuterRim_BattleDroid" or
+			defName="OuterRim_BattleDroidAdvanced" or
+			defName="OuterRim_MagnaGuardDroid" or
+			defName="OuterRim_ProtocolDroid" or
+			defName="OuterRim_CommandoDroid" or
+			defName="OuterRim_HKDroid" or
+			defName="OuterRim_SuperTacticalDroid" or
+			defName="OuterRim_TacticalDroid" or
+			defName="OuterRim_DUMDroid"
+			]/tools</xpath>
 		<value>
 			<tools>
 				<li Class="CombatExtended.ToolCE">
@@ -82,10 +83,10 @@
 	<!-- except SBDs and imperial heavies, who get a beefed up melee and no headbutt -->
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/Asimov.PawnDef[
-				defName="OuterRim_SuperBattleDroid" or
-				defName="OuterRim_ImperialLaborDroid" or
-				defName="OuterRim_KXSecurityDroid"
-				]/tools</xpath>
+			defName="OuterRim_SuperBattleDroid" or
+			defName="OuterRim_ImperialLaborDroid" or
+			defName="OuterRim_KXSecurityDroid"
+			]/tools</xpath>
 		<value>
 			<tools>
 				<li Class="CombatExtended.ToolCE">
@@ -116,14 +117,14 @@
 	
 	<!-- and most nonhuman droids get a simple "powertool" attack -->
 	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/Asimov.PawnDef[
-				defName="OuterRim_MuckrakerDroid" or
-				defName="OuterRim_FX7Droid" or
-				defName="OuterRim_GNKDroid" or
-				defName="OuterRim_MSEDroid" or
-				defName="OuterRim_SalvageAssistDroid" or
-				defName="OuterRim_AstromechDroid"
-				]/tools</xpath>
+		<xpath>Defs/ThingDef[
+			defName="OuterRim_MuckrakerDroid" or
+			defName="OuterRim_FX7Droid" or
+			defName="OuterRim_GNKDroid" or
+			defName="OuterRim_MSEDroid" or
+			defName="OuterRim_SalvageAssistDroid" or
+			defName="OuterRim_AstromechDroid"
+			]/tools</xpath>
 		<value>
 			<tools>
 				<li Class="CombatExtended.ToolCE">
@@ -133,7 +134,7 @@
 					</capacities>
 					<power>4</power>
 					<cooldownTime>1.26</cooldownTime>
-					<linkedBodyPartsGroup>OuterRim_DroidHand</linkedBodyPartsGroup>
+					<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
 					<armorPenetrationSharp>0.5</armorPenetrationSharp>
 					<armorPenetrationBlunt>0.5</armorPenetrationBlunt>
 				</li>
@@ -143,7 +144,7 @@
 	
 	<!-- except astromechs and droidekas, who get a weak headbutt -->
 	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/Asimov.PawnDef[defName="OuterRim_DestroyerDroid"]/tools</xpath>
+		<xpath>Defs/ThingDef[defName="OuterRim_DestroyerDroid"]/tools</xpath>
 		<value>
 			<tools>
 				<li Class="CombatExtended.ToolCE">
@@ -173,9 +174,9 @@
 	</Operation>
 
 	<Operation Class="PatchOperationConditional">
-		<xpath>Defs/Asimov.PawnDef[@Name="BaseAnimalDroid"]/comps</xpath>
+		<xpath>Defs/ThingDef[@Name="BaseAnimalDroid"]/comps</xpath>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>Defs/Asimov.PawnDef[@Name="BaseAnimalDroid"]</xpath>
+			<xpath>Defs/ThingDef[@Name="BaseAnimalDroid"]</xpath>
 			<value>
 				<comps />
 			</value>
@@ -183,7 +184,27 @@
 	</Operation>
 
 	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/Asimov.PawnDef[@Name="OuterRim_BaseHumanoidDroid" or @Name="BaseAnimalDroid"]/comps</xpath>
+		<xpath>Defs/Asimov.PawnDef[@Name="OuterRim_BaseHumanoidDroid"]/comps</xpath>
+		<value>
+			<li>
+				<compClass>CombatExtended.CompPawnGizmo</compClass>
+			</li>
+			<li Class="CombatExtended.CompProperties_ArmorDurability">
+				<Durability>500</Durability>
+				<Regenerates>true</Regenerates>
+				<RegenInterval>600</RegenInterval>
+				<RegenValue>5</RegenValue>
+				<MinArmorPct>0.5</MinArmorPct>
+			</li>
+			<!-- I didn't insert the suppressability comp for the base pawntype, because they're, well, droids -->
+			<li>
+				<compClass>CombatExtended.CompAmmoGiver</compClass>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[@Name="BaseAnimalDroid"]/comps</xpath>
 		<value>
 			<li>
 				<compClass>CombatExtended.CompPawnGizmo</compClass>
