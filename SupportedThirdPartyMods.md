@@ -659,6 +659,7 @@ Vanilla Races Expanded - Hussar  |
 Vanilla Races Expanded - Insector  |
 Vanilla Races Expanded - Lycanthrope  |
 Vanilla Races Expanded - Phytokin  |
+Vanilla Races Expanded - Pigskin  |
 Vanilla Races Expanded - Sanguophage  |
 Vanilla Races Expanded - Saurid  |
 Vanilla Skills Expanded  |
