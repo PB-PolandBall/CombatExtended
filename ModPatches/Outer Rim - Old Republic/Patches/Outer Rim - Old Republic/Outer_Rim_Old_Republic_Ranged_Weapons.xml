@@ -135,7 +135,7 @@
 					<hasStandardCommand>true</hasStandardCommand>
 					<defaultProjectile>Bullet_BlasterRifle_Stun</defaultProjectile>
 					<warmupTime>1</warmupTime>
-					<range>28</range>
+					<range>16</range>
 					<soundCast>OuterRim_Shot_SonicBlasterBolt</soundCast>
 					<soundCastTail>GunTail_Medium</soundCastTail>
 					<muzzleFlashScale>12</muzzleFlashScale>
@@ -204,7 +204,7 @@
 					<hasStandardCommand>true</hasStandardCommand>
 					<defaultProjectile>Bullet_BlasterRifle_Stun</defaultProjectile>
 					<warmupTime>1</warmupTime>
-					<range>28</range>
+					<range>16</range>
 					<soundCast>OuterRim_Shot_SonicBlasterBolt</soundCast>
 					<soundCastTail>GunTail_Medium</soundCastTail>
 					<muzzleFlashScale>12</muzzleFlashScale>
