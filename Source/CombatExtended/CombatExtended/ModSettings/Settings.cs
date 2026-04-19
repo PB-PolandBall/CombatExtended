@@ -26,6 +26,7 @@ public class Settings : ModSettings, ISettingsCE
     private bool genericAmmo = false;
     private bool partialstats = true;
     private bool enableExtraEffects = true;
+    private bool realWeaponNames = true;
 
     private bool enableArcOfFire = false;
 
@@ -74,6 +75,7 @@ public class Settings : ModSettings, ISettingsCE
 
     public bool PartialStat => partialstats;
     public bool EnableExtraEffects => enableExtraEffects;
+    public bool RealWeaponNames => realWeaponNames;
     public bool ShowExtraTooltips => showExtraTooltips;
     public bool DetailedMeleeTooltip => detailedMeleeTooltip;
 
@@ -213,6 +215,7 @@ public class Settings : ModSettings, ISettingsCE
         Scribe_Values.Look(ref showExtraStats, "showExtraStats", false);
         Scribe_Values.Look(ref variedHumanHeight, "variedHumanHeight", false);
         Scribe_Values.Look(ref logUnpatchedDefs, "logUnpatchedDefs", false);
+        Scribe_Values.Look(ref realWeaponNames, "realWeaponNames", true);
 
 #if DEBUG
         // Debug settings
@@ -427,6 +430,7 @@ public class Settings : ModSettings, ISettingsCE
         list.CheckboxLabeled("CE_Settings_DetailedMeleeTooltip_Title".Translate(), ref detailedMeleeTooltip, "CE_Settings_DetailedMeleeTooltip_Desc".Translate());
         list.CheckboxLabeled("CE_Settings_VariedHumanHeight_Title".Translate(), ref variedHumanHeight, "CE_Settings_VariedHumanHeight_Desc".Translate());
         list.CheckboxLabeled("CE_Settings_LogUnpatchedDefs_Title".Translate(), ref logUnpatchedDefs, "CE_Settings_LogUnpatchedDefs_Desc".Translate());
+        list.CheckboxLabeled("CE_Settings_RealWeaponNames_Title".Translate(), ref realWeaponNames, "CE_Settings_RealWeaponNames_Desc".Translate());
         list.Gap();
         list.GapLine();
         list.Gap();
@@ -586,6 +590,7 @@ public class Settings : ModSettings, ISettingsCE
         enablePawnKindAutopatcher = true;
         variedHumanHeight = false;
         logUnpatchedDefs = false;
+        realWeaponNames = true;
 
 #if DEBUG
         debuggingMode = false;
