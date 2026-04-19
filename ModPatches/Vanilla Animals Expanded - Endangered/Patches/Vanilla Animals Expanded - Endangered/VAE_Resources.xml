@@ -50,13 +50,6 @@
 				<MeleeCounterParryBonus>0.05</MeleeCounterParryBonus>
 			</value>				
 		</nomatch>
-		<match Class="PatchOperationAdd">
-			<xpath>Defs/ThingDef[defName="AEXP_RawFish"]/statBases</xpath>
-			<value>
-				<Bulk>0.05</Bulk>
-				<MeleeCounterParryBonus>0.05</MeleeCounterParryBonus>
-			</value>
-		</match>
 	</Operation>
 
 </Patch>
