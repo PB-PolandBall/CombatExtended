@@ -84,7 +84,7 @@
 		<li IfModActive="Mlem.beeralope">ModPatches/Beeralope Squad</li>
 		<li IfModActive="ElSov.Beliar">ModPatches/Beliar Xenotype</li>
 		<li IfModActive="Starppole.Beta.AnimeHair1.6">ModPatches/Beta Anime Hair</li>
-		<li IfModActive="Beta.GuPHAA">ModPatches/Beta GnP Hair and Apparel</li>		
+		<li IfModActive="Beta.GuPHAA">ModPatches/Beta GnP Hair and Apparel</li>
 		<li IfModActive="shunter.bettertradersguild">ModPatches/Better Traders Guild</li>
 		<li IfModActive="divineDerivative.AutoWool">ModPatches/Better Wool Production</li>
 		<li IfModActive="RedMattis.Heaven">ModPatches/Big and Small - Heaven and Hell</li>
@@ -94,7 +94,8 @@
 		<li IfModActive="RedMattis.BigSmall.Core">ModPatches/Big and Small Genes</li>
 		<li IfModActive="RedMattis.BigSmall">ModPatches/Big and Small Races</li>
 		<li IfModActive="RedMattis.BigWeapons">ModPatches/Big and Small Weapons</li>
-		<li IfModActive="Ushanka.BiologicalWarfare">ModPatches/BiologicalWarfare</li>
+		<li IfModActive="Koni.Misc.BioferriteChainsaw">ModPatches/Bioferrite Chainsaw</li>
+		<li IfModActive="Ushanka.BiologicalWarfare">ModPatches/Biological Warfare</li>
 		<li IfModActive="BiomesTeam.BiomesCaverns">ModPatches/Biomes Caverns</li>
 		<li IfModActive="BiomesTeam.BiomesCore">ModPatches/Biomes Core</li>
 		<li IfModActive="BiomesTeam.BiomesPollutedLands">ModPatches/Biomes Polluted Lands</li>
