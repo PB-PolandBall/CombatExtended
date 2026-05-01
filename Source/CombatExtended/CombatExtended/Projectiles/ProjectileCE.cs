@@ -651,7 +651,8 @@ public abstract class ProjectileCE : ThingWithComps
 
         // --- Creating shell to use linked mechanics
 
-        Props.shellingProps.tilesPerTick = 99999; // instant speeeeed !
+        // Seen with N7Huntsman, it's better to let the user decide the speed, as instant projectiles can be railguns.
+        // Props.shellingProps.tilesPerTick = 99999; // instant speeeeed !
 
         TravelingRaycast travelingRaycast = (TravelingRaycast)WorldObjectMaker.MakeWorldObject(CE_WorldObjectDefOf.TravelingRaycast);
         if (launcher?.Faction != null)
