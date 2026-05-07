@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Reflection;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using RimWorld;
 using Verse;
-using Verse.AI;
-using Verse.Sound;
 using UnityEngine;
 
 namespace CombatExtended;
@@ -18,7 +15,7 @@ public static class BoundsInjector
         Plant
     }
 
-    private static Dictionary<string, Vector2> boundMap = new Dictionary<string, Vector2>();
+    private static ConcurrentDictionary<string, Vector2> boundMap = new ConcurrentDictionary<string, Vector2>();
 
     public static Vector2 BoundMap(Graphic graphic, GraphicType type, Graphic headGraphic, Vector2 headOffset)
     {
@@ -186,101 +183,118 @@ public static class BoundsInjector
 
     public static void Inject()
     {
-        foreach (PawnKindDef def in DefDatabase<PawnKindDef>.AllDefs.Where(x => !x.RaceProps.Humanlike))
+        List<PawnKindDef> pawnKindsToInject = [];
+        foreach (PawnKindDef pawnKindDef in DefDatabase<PawnKindDef>.AllDefs)
         {
-            for (int i = 0; i < def.lifeStages.Count; i++)
+            if (pawnKindDef.RaceProps.Humanlike)
             {
-                PawnKindLifeStage lifeStage = def.lifeStages[i];
-
-                try
-                {
-                    if (lifeStage.bodyGraphicData != null && lifeStage.bodyGraphicData.Graphic != null)
-                    {
-                        BoundMap(lifeStage.bodyGraphicData.Graphic, GraphicType.Pawn);
-                    }
-                }
-                catch (Exception e)
-                {
-                    throw new Exception(def + ".lifeStages[" + i + "].bodyGraphicData", e);
-                }
-
-                try
-                {
-                    if (lifeStage.femaleGraphicData != null && lifeStage.femaleGraphicData.Graphic != null)
-                    {
-                        BoundMap(lifeStage.femaleGraphicData.Graphic, GraphicType.Pawn);
-                    }
-                }
-                catch (Exception e)
-                {
-                    throw new Exception(def + ".lifeStages[" + i + "].femaleGraphicData", e);
-                }
-
-                try
-                {
-                    if (lifeStage.dessicatedBodyGraphicData != null && lifeStage.dessicatedBodyGraphicData.Graphic != null)
-                    {
-                        BoundMap(lifeStage.dessicatedBodyGraphicData.Graphic, GraphicType.Pawn);
-                    }
-                }
-                catch (Exception e)
-                {
-                    throw new Exception(def + ".lifeStages[" + i + "].dessicatedBodyGraphicData", e);
-                }
-
-                try
-                {
-                    if (lifeStage.femaleDessicatedBodyGraphicData != null && lifeStage.femaleDessicatedBodyGraphicData.Graphic != null)
-                    {
-                        BoundMap(lifeStage.femaleDessicatedBodyGraphicData.Graphic, GraphicType.Pawn);
-                    }
-                }
-                catch (Exception e)
-                {
-                    throw new Exception(def + ".lifeStages[" + i + "].femaleDessicatedBodyGraphicData", e);
-                }
+                pawnKindsToInject.Add(pawnKindDef);
             }
         }
-
-        foreach (ThingDef def in DefDatabase<ThingDef>.AllDefs.Where<ThingDef>(x => x.plant != null))
+        GenThreading.ParallelForEach(pawnKindsToInject, InjectPawnKinds);
+        foreach (ThingDef thingDef in DefDatabase<ThingDef>.AllDefs)
         {
-            try
+            if (thingDef.plant != null)
             {
-                if (def.graphicData != null && def.graphicData.Graphic != null)
-                {
-                    BoundMap(def.graphicData.Graphic, GraphicType.Plant);
-                }
-            }
-            catch (Exception e)
-            {
-                throw new Exception(def + ".graphicData", e);
-            }
-
-            try
-            {
-                if (def.plant.leaflessGraphic != null)
-                {
-                    BoundMap(def.plant.leaflessGraphic, GraphicType.Plant);
-                }
-            }
-            catch (Exception e)
-            {
-                throw new Exception(def + ".plant.leaflessGraphic", e);
-            }
-
-            try
-            {
-                if (def.plant.immatureGraphic != null)
-                {
-                    BoundMap(def.plant.immatureGraphic, GraphicType.Plant);
-                }
-            }
-            catch (Exception e)
-            {
-                throw new Exception(def + ".plant.immatureGraphic", e);
+                InjectPlants(thingDef);
             }
         }
+        Log.Message("Combat Extended :: Bounds pre-generated");
+    }
 
+    private static void InjectPawnKinds(PawnKindDef pawnKindDef)
+    {
+        for (int i = 0; i < pawnKindDef.lifeStages.Count; i++)
+        {
+            PawnKindLifeStage lifeStage = pawnKindDef.lifeStages[i];
+
+            try
+            {
+                if (lifeStage.bodyGraphicData != null && lifeStage.bodyGraphicData.Graphic != null)
+                {
+                    BoundMap(lifeStage.bodyGraphicData.Graphic, GraphicType.Pawn);
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(pawnKindDef + ".lifeStages[" + i + "].bodyGraphicData", e);
+            }
+
+            try
+            {
+                if (lifeStage.femaleGraphicData != null && lifeStage.femaleGraphicData.Graphic != null)
+                {
+                    BoundMap(lifeStage.femaleGraphicData.Graphic, GraphicType.Pawn);
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(pawnKindDef + ".lifeStages[" + i + "].femaleGraphicData", e);
+            }
+
+            try
+            {
+                if (lifeStage.dessicatedBodyGraphicData != null && lifeStage.dessicatedBodyGraphicData.Graphic != null)
+                {
+                    BoundMap(lifeStage.dessicatedBodyGraphicData.Graphic, GraphicType.Pawn);
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(pawnKindDef + ".lifeStages[" + i + "].dessicatedBodyGraphicData", e);
+            }
+
+            try
+            {
+                if (lifeStage.femaleDessicatedBodyGraphicData != null && lifeStage.femaleDessicatedBodyGraphicData.Graphic != null)
+                {
+                    BoundMap(lifeStage.femaleDessicatedBodyGraphicData.Graphic, GraphicType.Pawn);
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(pawnKindDef + ".lifeStages[" + i + "].femaleDessicatedBodyGraphicData", e);
+            }
+        }
+    }
+
+    private static void InjectPlants(ThingDef plantDef)
+    {
+        try
+        {
+            if (plantDef.graphicData != null && plantDef.graphicData.Graphic != null)
+            {
+                BoundMap(plantDef.graphicData.Graphic, GraphicType.Plant);
+            }
+        }
+        catch (Exception e)
+        {
+            throw new Exception(plantDef + ".graphicData", e);
+        }
+
+        try
+        {
+            if (plantDef.plant.leaflessGraphic != null)
+            {
+                BoundMap(plantDef.plant.leaflessGraphic, GraphicType.Plant);
+            }
+        }
+        catch (Exception e)
+        {
+            throw new Exception(plantDef + ".plant.leaflessGraphic", e);
+        }
+
+        try
+        {
+            if (plantDef.plant.immatureGraphic != null)
+            {
+                BoundMap(plantDef.plant.immatureGraphic, GraphicType.Plant);
+            }
+        }
+        catch (Exception e)
+        {
+            throw new Exception(plantDef + ".plant.immatureGraphic", e);
+        }
         Graphic graphicSowing = Plant.GraphicSowing;
 
         try
@@ -294,8 +308,6 @@ public static class BoundsInjector
         {
             throw new Exception("GraphicSowing", e);
         }
-
-        Log.Message("Combat Extended :: Bounds pre-generated");
     }
 
     public static Vector2 ForPawn(Pawn pawn)
@@ -411,28 +423,4 @@ public static class BoundsInjector
         return plant.def.plant.visualSizeRange.LerpThroughRange(plant.Growth) * BoundMap(plant.Graphic, GraphicType.Plant);
     }
 
-    /*public static void LogDatabase()
-    {
-        var str = new StringBuilder();
-
-        str.AppendLine("PAWNS");
-
-        foreach (PawnKindDef kindDef in DefDatabase<PawnKindDef>.AllDefs.Where(x => !x.race.race.Humanlike))
-        {
-            str.AppendLine(kindDef.ToString() + ", " + kindDef.race.race.baseBodySize +", " + String.Join(", ", boundMap[kindDef.defName].dict.Select(x => x.Key+"="+x.Value.First+","+x.Key+"="+x.Value.Second).ToArray()));
-        }
-
-        str.AppendLine();
-        str.AppendLine("PLANTS");
-
-        //Fire is dummy name for a sowing plant's texture
-        str.AppendLine("Sowing Plant, " + String.Join(", ", boundMap[ThingDefOf.Fire.defName].dict.Select(x => x.Key+"="+x.Value.First+","+x.Key+"="+x.Value.Second).ToArray()));
-
-        foreach (ThingDef plantDef in DefDatabase<ThingDef>.AllDefs.Where(x => x.plant != null))
-        {
-            str.AppendLine(plantDef.ToString() + ", " + plantDef.fillPercent + ", " +plantDef.plant.visualSizeRange.ToString() +", " + String.Join(", ", boundMap[plantDef.defName].dict.Select(x => x.Key+"="+x.Value.First+","+x.Value.Second).ToArray()));
-        }
-
-        Log.Message(str.ToString());
-    }*/
 }
