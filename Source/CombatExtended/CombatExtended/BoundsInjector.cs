@@ -72,7 +72,7 @@ public static class BoundsInjector
         // TODO : Refactor
         if (type == GraphicType.Plant)
         {
-            return new Vector2(1f,(vBounds.max - vBounds.min) / (float)vHeight);
+            return new Vector2(1f, (vBounds.max - vBounds.min) / (float)vHeight);
         }
 
         int hWidth;
