@@ -651,7 +651,8 @@ public abstract class ProjectileCE : ThingWithComps
 
         // --- Creating shell to use linked mechanics
 
-        Props.shellingProps.tilesPerTick = 99999; // instant speeeeed !
+        // Seen with N7Huntsman, it's better to let the user decide the speed, as instant projectiles can be railguns.
+        // Props.shellingProps.tilesPerTick = 99999; // instant speeeeed !
 
         TravelingRaycast travelingRaycast = (TravelingRaycast)WorldObjectMaker.MakeWorldObject(CE_WorldObjectDefOf.TravelingRaycast);
         if (launcher?.Faction != null)
@@ -1020,6 +1021,11 @@ public abstract class ProjectileCE : ThingWithComps
             return true;
         }
         var roofChecked = false;
+
+        if (Map.GetLightingTracker().HighestCoverAt(cell) < ExactPosition.y)
+        {
+            return false;
+        }
 
         potentialCollisionCandidates.Clear();
 
@@ -1535,21 +1541,24 @@ public abstract class ProjectileCE : ThingWithComps
             }
         }
 
-        // FIXME : Early opt-out
-        Thing thing = pos.GetFirstPawn(Map);
-        if (thing != null && TryCollideWith(thing))
+        if (Map.GetLightingTracker().HighestCoverAt(pos) > ExactPosition.y)
         {
-            return;
-        }
-
-        var list = Map.thingGrid.ThingsListAt(pos).Where(t => t is Pawn || t.def.Fillage != FillCategory.None).ToList();
-        if (list.Count > 0)
-        {
-            foreach (var thing2 in list)
+            // FIXME : Early opt-out
+            Thing thing = pos.GetFirstPawn(Map);
+            if (thing != null && TryCollideWith(thing))
             {
-                if (TryCollideWith(thing2))
+                return;
+            }
+
+            var list = Map.thingGrid.ThingsListAt(pos).Where(t => t is Pawn || t.def.Fillage != FillCategory.None).ToList();
+            if (list.Count > 0)
+            {
+                foreach (var thing2 in list)
                 {
-                    return;
+                    if (TryCollideWith(thing2))
+                    {
+                        return;
+                    }
                 }
             }
         }
