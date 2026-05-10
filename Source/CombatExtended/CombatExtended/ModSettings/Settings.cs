@@ -36,6 +36,7 @@ public class Settings : ModSettings, ISettingsCE
 
     private bool showExtraTooltips = false;
     private bool detailedMeleeTooltip = false;
+    private bool nonPlayerMeleeTooltip = false;
 
     private bool showExtraStats = false;
 
@@ -76,6 +77,7 @@ public class Settings : ModSettings, ISettingsCE
     public bool EnableExtraEffects => enableExtraEffects;
     public bool ShowExtraTooltips => showExtraTooltips;
     public bool DetailedMeleeTooltip => detailedMeleeTooltip;
+    public bool NonPlayerMeleeTooltip => nonPlayerMeleeTooltip;
 
     public bool ShowExtraStats => showExtraStats;
     public bool EnableCIWS => enableCIWS;
@@ -208,6 +210,7 @@ public class Settings : ModSettings, ISettingsCE
         Scribe_Values.Look(ref enableExtraEffects, "enableExtraEffects", true);
         Scribe_Values.Look(ref showExtraTooltips, "showExtraTooltips", false);
         Scribe_Values.Look(ref detailedMeleeTooltip, "detailedMeleeTooltip", false);
+        Scribe_Values.Look(ref nonPlayerMeleeTooltip, "nonPlayerMeleeTooltip", false);
         Scribe_Values.Look(ref enableArcOfFire, "enableArcOfFire", false);
 
         Scribe_Values.Look(ref showExtraStats, "showExtraStats", false);
@@ -425,6 +428,7 @@ public class Settings : ModSettings, ISettingsCE
         list.CheckboxLabeled("CE_Settings_ShowExtraTooltips_Title".Translate(), ref showExtraTooltips, "CE_Settings_ShowExtraTooltips_Desc".Translate());
         list.CheckboxLabeled("CE_Settings_ShowExtraStats_Title".Translate(), ref showExtraStats, "CE_Settings_ShowExtraStats_Desc".Translate());
         list.CheckboxLabeled("CE_Settings_DetailedMeleeTooltip_Title".Translate(), ref detailedMeleeTooltip, "CE_Settings_DetailedMeleeTooltip_Desc".Translate());
+        list.CheckboxLabeled("CE_Settings_NonPlayerMeleeTooltip_Title".Translate(), ref nonPlayerMeleeTooltip, "CE_Settings_NonPlayerMeleeTooltip_Desc".Translate());
         list.CheckboxLabeled("CE_Settings_VariedHumanHeight_Title".Translate(), ref variedHumanHeight, "CE_Settings_VariedHumanHeight_Desc".Translate());
         list.CheckboxLabeled("CE_Settings_LogUnpatchedDefs_Title".Translate(), ref logUnpatchedDefs, "CE_Settings_LogUnpatchedDefs_Desc".Translate());
         list.Gap();
@@ -577,6 +581,7 @@ public class Settings : ModSettings, ISettingsCE
         showExtraTooltips = false;
         showExtraStats = false;
         detailedMeleeTooltip = false;
+        nonPlayerMeleeTooltip = false;
         // AutoPatcher Settings
         debugAutopatcherLogger = false;
         enableApparelAutopatcher = false;
