@@ -283,7 +283,11 @@ public class Settings : ModSettings, ISettingsCE
         Scribe_Values.Look(ref opportunisticReloadMode, nameof(opportunisticReloadMode), OpportunisticReloadMode.Any);
         Scribe_Values.Look(ref opportunisticReloadSafeDistance, nameof(opportunisticReloadSafeDistance), 12.9f);
         Scribe_Values.Look(ref secondsAfterFightToOpportunisticReload, nameof(secondsAfterFightToOpportunisticReload), 5);
+
+        // Compatibility
+        Scribe_Values.Look(ref patchArmorDamage, "patchArmorDamage", true);
     }
+
     public void DoWindowContents(Listing_Standard list)
     {
         switch (Controller.SelectedTab)
@@ -612,6 +616,8 @@ public class Settings : ModSettings, ISettingsCE
         debugDisplayCellCoverRating = false;
         debugWorldShellingDamageRandomness = false;
 #endif
+        // Compatibility Settings
+        patchArmorDamage = true;
     }
     #endregion
 
