@@ -3,7 +3,7 @@
 	<!-- ============================ Industrial - HG ============================ -->
 	<!-- GF PA-15 -->
 	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
-		<defName>RFGun_PA15_AP</defName>
+		<defName>NLGun_PA15_AP</defName>
 		<statBases>
 			<WorkToMake>7500</WorkToMake> <!-- Base + 50% -->
 			<Bulk>2.03</Bulk>
@@ -43,7 +43,7 @@
 
 	<!-- GF MDRX .308/7.62 NATO -->
 	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
-		<defName>RFGun_MDR</defName>
+		<defName>NLGun_MDR</defName>
 		<statBases>
 			<WorkToMake>45000</WorkToMake> <!-- Base + 12.5% -->
 			<Bulk>6.61</Bulk>
@@ -89,7 +89,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="RFGun_MDR"]/tools</xpath>
+		<xpath>Defs/ThingDef[defName="NLGun_MDR"]/tools</xpath>
 		<value>
 			<tools>
 				<li Class="CombatExtended.ToolCE">
