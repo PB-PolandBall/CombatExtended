@@ -1,15 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-	<!-- ========================= -->
-	<!-- Nordbergian Rabbit        -->
-	<!-- ========================= -->
+	<!-- Nordbergian Rabbit -->
 
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>Defs/ThingDef[@Name="BaseHareNordberg"]</xpath>
 		<value>
 			<li Class="CombatExtended.RacePropertiesExtensionCE">
-				<bodyShape>Quadruped</bodyShape>
+				<bodyShape>QuadrupedLow</bodyShape>
 			</li>
 		</value>
 	</Operation>
@@ -17,18 +15,10 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[@Name="BaseHareNordberg"]/statBases/MoveSpeed</xpath>
 		<value>
-			<MoveSpeed>6.5</MoveSpeed>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[@Name="BaseHareNordberg"]/statBases</xpath>
-		<value>
-			<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.22</ArmorRating_Blunt>
-			<MeleeDodgeChance>0.18</MeleeDodgeChance>
-			<MeleeCritChance>0.04</MeleeCritChance>
-			<MeleeParryChance>0.02</MeleeParryChance>
+			<MoveSpeed>4.8</MoveSpeed>
+			<MeleeDodgeChance>0.24</MeleeDodgeChance>
+			<MeleeCritChance>0.02</MeleeCritChance>
+			<MeleeParryChance>0</MeleeParryChance>
 		</value>
 	</Operation>
 
@@ -40,44 +30,34 @@
 					<capacities>
 						<li>Bite</li>
 					</capacities>
-					<power>3.5</power>
-					<cooldownTime>1.85</cooldownTime>
+					<power>2.8</power>
+					<cooldownTime>1.26</cooldownTime>
 					<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
-					<chanceFactor>1.0</chanceFactor>
-					<armorPenetrationSharp>0.25</armorPenetrationSharp>
-					<armorPenetrationBlunt>0.75</armorPenetrationBlunt>
+					<armorPenetrationSharp>0.01</armorPenetrationSharp>
+					<armorPenetrationBlunt>0.21</armorPenetrationBlunt>
 				</li>
 				<li Class="CombatExtended.ToolCE">
 					<label>head</label>
 					<capacities>
 						<li>Blunt</li>
 					</capacities>
-					<power>1.5</power>
-					<cooldownTime>2.0</cooldownTime>
+					<power>0.8</power>
+					<cooldownTime>1.26</cooldownTime>
 					<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
 					<chanceFactor>0.2</chanceFactor>
-					<armorPenetrationBlunt>0.35</armorPenetrationBlunt>
+					<armorPenetrationBlunt>0.21</armorPenetrationBlunt>
 				</li>
 			</tools>
 		</value>
 	</Operation>
 
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/PawnKindDef[defName="Nordberg_ROE_Snowhare"]</xpath>
-		<value>
-			<combatPower>18</combatPower>
-		</value>
-	</Operation>
-
-	<!-- ========================= -->
-	<!-- Nordbergian Seal          -->
-	<!-- ========================= -->
+	<!-- Nordbergian Seal -->
 
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>Defs/ThingDef[defName="Nordberg_ROE_Seal"]</xpath>
 		<value>
 			<li Class="CombatExtended.RacePropertiesExtensionCE">
-				<bodyShape>Quadruped</bodyShape>
+				<bodyShape>QuadrupedLow</bodyShape>
 			</li>
 		</value>
 	</Operation>
@@ -107,26 +87,25 @@
 				<li Class="CombatExtended.ToolCE">
 					<label>tusk</label>
 					<capacities>
-						<li>Scratch</li>
-						<li>Stab</li>
+						<li>Poke</li>
 					</capacities>
-					<power>12</power>
-					<cooldownTime>2.25</cooldownTime>
+					<power>32</power>
+					<cooldownTime>1.6</cooldownTime>
+					<chanceFactor>1.2</chanceFactor>
 					<linkedBodyPartsGroup>TuskAttackTool</linkedBodyPartsGroup>
-					<chanceFactor>1.1</chanceFactor>
-					<armorPenetrationSharp>1.20</armorPenetrationSharp>
-					<armorPenetrationBlunt>4.50</armorPenetrationBlunt>
+					<armorPenetrationSharp>0.19</armorPenetrationSharp>
+					<armorPenetrationBlunt>14.45</armorPenetrationBlunt>
 				</li>
 				<li Class="CombatExtended.ToolCE">
 					<capacities>
 						<li>Bite</li>
 					</capacities>
-					<power>11</power>
+					<power>13</power>
 					<cooldownTime>1.85</cooldownTime>
 					<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
 					<chanceFactor>0.8</chanceFactor>
-					<armorPenetrationSharp>0.90</armorPenetrationSharp>
-					<armorPenetrationBlunt>4.00</armorPenetrationBlunt>
+					<armorPenetrationSharp>0.14</armorPenetrationSharp>
+					<armorPenetrationBlunt>2</armorPenetrationBlunt>
 				</li>
 				<li Class="CombatExtended.ToolCE">
 					<label>head</label>
@@ -137,23 +116,9 @@
 					<cooldownTime>2.1</cooldownTime>
 					<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
 					<chanceFactor>0.2</chanceFactor>
-					<armorPenetrationBlunt>2.20</armorPenetrationBlunt>
+					<armorPenetrationBlunt>2.2</armorPenetrationBlunt>
 				</li>
 			</tools>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/PawnKindDef[defName="Nordberg_ROE_SealPup"]/combatPower</xpath>
-		<value>
-			<combatPower>20</combatPower>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/PawnKindDef[defName="Nordberg_ROE_Seal"]/combatPower</xpath>
-		<value>
-			<combatPower>95</combatPower>
 		</value>
 	</Operation>
 
