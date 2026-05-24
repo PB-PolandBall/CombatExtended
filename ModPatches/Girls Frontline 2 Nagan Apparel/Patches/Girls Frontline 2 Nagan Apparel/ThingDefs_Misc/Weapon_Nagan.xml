@@ -39,7 +39,6 @@
 		</weaponTags>
 	</Operation>
 	
-	
 <!-- Tools -->
 
     <Operation Class="PatchOperationReplace">
@@ -69,5 +68,6 @@
               </li>
             </tools>
 		</value>
-	</Operation>	
+	</Operation>
+
 </Patch>	
