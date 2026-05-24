@@ -499,6 +499,7 @@ Remove Industrial Stuff |
 Revia Race |
 Revia Race - biotech |
 Rim Contractors Arsenal	|
+Rim Of Evil: Northern Frontier |
 Rim of Madness - Bones	|
 Rim of Madness - Vampires	|
 Rim of Madness - Werewolves	|
@@ -511,7 +512,6 @@ Rimedieval - Medieval Royalty   |
 Rimefeller	|
 Rim-Elves   |
 Rim-Gnoblins	|
-Rim Of Evil: Northern Frontier |
 Rim-Hivers!	|
 Rim Flood	|
 Rim-Robots_	|

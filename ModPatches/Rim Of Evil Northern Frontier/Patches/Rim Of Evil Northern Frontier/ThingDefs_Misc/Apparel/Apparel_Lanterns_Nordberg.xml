@@ -6,7 +6,7 @@
 	<!-- ========================= -->
 
 	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[	defName="Apparel_ROE_LanternA" or defName="Apparel_ROE_LanternB"]/statBases</xpath>
+		<xpath>Defs/ThingDef[defName="Apparel_ROE_LanternA" or defName="Apparel_ROE_LanternB"]/statBases</xpath>
 		<value>
 			<Bulk>2</Bulk>
 			<WornBulk>1</WornBulk>
