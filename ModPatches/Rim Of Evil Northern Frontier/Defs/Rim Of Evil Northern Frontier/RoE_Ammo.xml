@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<!-- ==================== Ammo Category ==================== -->
+
+	<CombatExtended.AmmoCategoryDef>
+		<defName>NordbergHarpoon</defName>
+		<label>harpoon</label>
+		<description>A large throwing harpoon used by northern hunters to wound and bleed larger prey.</description>
+	</CombatExtended.AmmoCategoryDef>
+
+	<!-- ==================== Ammo Set ========================= -->
+
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_NordbergHarpoons</defName>
+		<label>harpoons</label>
+		<ammoTypes>
+			<Nordberg_ROE_Harpoon>NordbergHarpoon_Thrown</Nordberg_ROE_Harpoon>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+
+	<!-- ==================== Recipe =========================== -->
+
+	<RecipeDef ParentName="AmmoRecipeNeolithicBase">
+		<defName>MakeNordberg_ROE_Harpoon</defName>
+		<label>make hunting harpoons x3</label>
+		<description>Craft 3 hunting harpoons.</description>
+		<jobString>Making hunting harpoons.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<skillRequirements>
+			<Crafting>4</Crafting>
+		</skillRequirements>
+		<recipeUsers>
+			<li>ElectricSmithy</li>
+			<li>FueledSmithy</li>
+			<li>CraftingSpot</li>
+			<li MayRequire="DankPyon.Medieval.Overhaul">DankPyon_Anvil</li>
+		</recipeUsers>
+		<effectWorking>Smelt</effectWorking>
+		<unfinishedThingDef>UnfinishedAmmo</unfinishedThingDef>
+		<workAmount>3200</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WoodLog</li>
+					</thingDefs>
+				</filter>
+				<count>60</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>15</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WoodLog</li>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Nordberg_ROE_Harpoon>3</Nordberg_ROE_Harpoon>
+		</products>
+		<displayPriority>501</displayPriority>
+	</RecipeDef>
+
+	<!-- Yeti Thrown Rock -->
+	<ThingDef ParentName="BaseExplosiveBullet">
+		<defName>CE_Nordberg_ROE_Rock</defName>
+		<label>boulder</label>
+		<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>		
+		<graphicData>
+			<texPath>Things/Item/Chunk/ChunkStone</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<drawSize>0.40</drawSize>
+      		<color>(220,283,243)</color>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Blunt</damageDef>
+			<preExplosionSpawnChance>0.4</preExplosionSpawnChance>
+			<preExplosionSpawnThingDef>Filth_RubbleRock</preExplosionSpawnThingDef>
+			<damageAmountBase>50</damageAmountBase>
+			<explosionRadius>1</explosionRadius>
+			<soundExplode>Roof_Collapse</soundExplode>
+			<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+			<ai_IsIncendiary>true</ai_IsIncendiary>
+			<speed>18</speed>
+			<spinRate>1</spinRate>
+			<flyOverhead>false</flyOverhead>
+			<dropsCasings>false</dropsCasings>
+		</projectile>
+	</ThingDef>
+
+</Defs>
