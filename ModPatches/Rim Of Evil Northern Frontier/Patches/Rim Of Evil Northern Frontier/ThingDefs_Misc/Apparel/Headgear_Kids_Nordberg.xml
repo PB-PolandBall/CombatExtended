@@ -1,140 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-	<!-- ========================= -->
 	<!-- Nordberg child headgear   -->
-	<!-- ========================= -->
-	
+
 	<!-- Basic boys/girls hoods:-->
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergBoyHood" or defName="Apparel_ROE_NordbergGirlHood"]/statBases</xpath>
 		<value>
-			<Bulk>2</Bulk>
-			<WornBulk>1</WornBulk>
-		</value>
-	</Operation>
-  
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergBoyHood" or defName="Apparel_ROE_NordbergGirlHood"]/statBases/WorkToMake</xpath>
-		<value>
-			<WorkToMake>1800</WorkToMake>
-		</value>
-	</Operation>
-  
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergBoyHood" or defName="Apparel_ROE_NordbergGirlHood"]/statBases/MaxHitPoints</xpath>
-		<value>
-			<MaxHitPoints>90</MaxHitPoints>
-		</value>
-	</Operation>
-  
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergBoyHood" or defName="Apparel_ROE_NordbergGirlHood"]/statBases/Mass</xpath>
-		<value>
-			<Mass>0.25</Mass>
+			<Bulk>1</Bulk>
 		</value>
 	</Operation>
   
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergBoyHood" or defName="Apparel_ROE_NordbergGirlHood"]/statBases/ArmorRating_Sharp</xpath>
 		<value>
-			<ArmorRating_Sharp>0.06</ArmorRating_Sharp>
+			<ArmorRating_Sharp>0.14</ArmorRating_Sharp>
 		</value>
 	</Operation>
   
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergBoyHood" or defName="Apparel_ROE_NordbergGirlHood"]/statBases/ArmorRating_Blunt</xpath>
 		<value>
-			<ArmorRating_Blunt>0.08</ArmorRating_Blunt>
+			<ArmorRating_Blunt>0.06</ArmorRating_Blunt>
 		</value>
 	</Operation>
-  
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergBoyHood" or defName="Apparel_ROE_NordbergGirlHood"]/statBases/ArmorRating_Heat</xpath>
-		<value>
-			<ArmorRating_Heat>0.04</ArmorRating_Heat>
-		</value>
-	</Operation>
-  
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergBoyHood" or defName="Apparel_ROE_NordbergGirlHood"]/statBases/Insulation_Cold</xpath>
-		<value>
-			<Insulation_Cold>24</Insulation_Cold>
-		</value>
-	</Operation>
-  
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergBoyHood" or defName="Apparel_ROE_NordbergGirlHood"]/statBases/EquipDelay</xpath>
-		<value>
-			<EquipDelay>0.5</EquipDelay>
-		</value>
-	</Operation>
-	
-	<!-- Outcast's Hood:-->
+
+	<!-- Outcast's Hood -->
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergWitchBoyHood"]/statBases</xpath>
 		<value>
-			<Bulk>3</Bulk>
-			<WornBulk>1</WornBulk>
+			<Bulk>1</Bulk>
 		</value>
 	</Operation>
-  
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergWitchBoyHood"]/statBases/WorkToMake</xpath>
-		<value>
-			<WorkToMake>2200</WorkToMake>
-		</value>
-	</Operation>
-  
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergWitchBoyHood"]/statBases/MaxHitPoints</xpath>
-		<value>
-			<MaxHitPoints>115</MaxHitPoints>
-		</value>
-	</Operation>
-  
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergWitchBoyHood"]/statBases/Mass</xpath>
-		<value>
-			<Mass>0.35</Mass>
-		</value>
-	</Operation>
-  
+
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergWitchBoyHood"]/statBases/ArmorRating_Sharp</xpath>
 		<value>
-			<ArmorRating_Sharp>0.14</ArmorRating_Sharp>
+			<ArmorRating_Sharp>0.16</ArmorRating_Sharp>
 		</value>
 	</Operation>
   
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergWitchBoyHood"]/statBases/ArmorRating_Blunt</xpath>
 		<value>
-			<ArmorRating_Blunt>0.16</ArmorRating_Blunt>
+			<ArmorRating_Blunt>0.11</ArmorRating_Blunt>
 		</value>
 	</Operation>
-  
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergWitchBoyHood"]/statBases/ArmorRating_Heat</xpath>
-		<value>
-			<ArmorRating_Heat>0.06</ArmorRating_Heat>
-		</value>
-	</Operation>
-  
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergWitchBoyHood"]/statBases/Insulation_Cold</xpath>
-		<value>
-			<Insulation_Cold>26</Insulation_Cold>
-		</value>
-	</Operation>
-  
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergWitchBoyHood"]/statBases/EquipDelay</xpath>
-		<value>
-			<EquipDelay>0.6</EquipDelay>
-		</value>
-	</Operation>
-  
+
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergWitchBoyHood"]/equippedStatOffsets/MeleeHitChance</xpath>
 		<value>
@@ -143,49 +55,21 @@
 	</Operation>
   
 	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergWitchBoyHood"]/equippedStatOffsets/PsychicEntropyRecoveryRate</xpath>
-		<value>
-			<PsychicEntropyRecoveryRate MayRequire="Ludeon.RimWorld.Royalty">0.02</PsychicEntropyRecoveryRate>
-		</value>
-	</Operation>
-  
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergWitchBoyHood"]/equippedStatOffsets/SocialImpact</xpath>
-		<value>
-			<SocialImpact>-0.08</SocialImpact>
-		</value>
-	</Operation>
-  
-	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergWitchBoyHood"]/equippedStatOffsets/ToxicEnvironmentResistance</xpath>
 		<value>
 			<ToxicEnvironmentResistance>0.10</ToxicEnvironmentResistance>
+			<SmokeSensitivity>-0.1</SmokeSensitivity>
 		</value>
 	</Operation>
 	
-	<!-- Child earmuffs:-->
+	<!-- Child earmuffs -->
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergEarmuffs"]/statBases</xpath>
 		<value>
-			<Bulk>1</Bulk>
-			<WornBulk>0.5</WornBulk>
+			<Bulk>0.35</Bulk>
 		</value>
 	</Operation>
-  
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergEarmuffs"]/statBases/WorkToMake</xpath>
-		<value>
-			<WorkToMake>900</WorkToMake>
-		</value>
-	</Operation>
-  
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergEarmuffs"]/statBases/MaxHitPoints</xpath>
-		<value>
-			<MaxHitPoints>55</MaxHitPoints>
-		</value>
-	</Operation>
-  
+
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergEarmuffs"]/statBases/ArmorRating_Sharp</xpath>
 		<value>
@@ -196,28 +80,7 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergEarmuffs"]/statBases/ArmorRating_Blunt</xpath>
 		<value>
-			<ArmorRating_Blunt>0.03</ArmorRating_Blunt>
-		</value>
-	</Operation>
-  
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergEarmuffs"]/statBases/ArmorRating_Heat</xpath>
-		<value>
-			<ArmorRating_Heat>0.02</ArmorRating_Heat>
-		</value>
-	</Operation>
-  
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergEarmuffs"]/statBases/Insulation_Cold</xpath>
-		<value>
-			<Insulation_Cold>14</Insulation_Cold>
-		</value>
-	</Operation>
-  
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="Apparel_ROE_NordbergEarmuffs"]/equippedStatOffsets/SocialImpact</xpath>
-		<value>
-			<SocialImpact>0.08</SocialImpact>
+			<ArmorRating_Blunt>0.01</ArmorRating_Blunt>
 		</value>
 	</Operation>
   

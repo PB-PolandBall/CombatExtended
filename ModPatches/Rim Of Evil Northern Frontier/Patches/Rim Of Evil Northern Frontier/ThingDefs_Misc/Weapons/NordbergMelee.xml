@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-	<!-- ========================= -->
-	<!-- Nordberg melee           -->
-	<!-- ========================= -->
+	<!-- Nordberg melee -->
 
 	<!-- Hunter's Club -->
 	<Operation Class="PatchOperationAdd">
@@ -14,19 +12,12 @@
 		</value>
 	</Operation>
 
-	<Operation Class="PatchOperationReplace">
+	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[defName="MeleeWeapon_ROE_HuntersClub"]/equippedStatOffsets</xpath>
 		<value>
-			<equippedStatOffsets>
-				<ArrestSuccessChance>0.01</ArrestSuccessChance>
-				<AnimalGatherSpeed>0.02</AnimalGatherSpeed>
-				<TameAnimalChance>0.02</TameAnimalChance>
-				<TrainAnimalChance>0.02</TrainAnimalChance>
-				<BondAnimalChanceFactor>-0.05</BondAnimalChanceFactor>
-				<MeleeCritChance>0.22</MeleeCritChance>
-				<MeleeParryChance>0.16</MeleeParryChance>
-				<MeleeDodgeChance>0.08</MeleeDodgeChance>
-			</equippedStatOffsets>
+			<MeleeCritChance>0.71</MeleeCritChance>
+			<MeleeParryChance>0.14</MeleeParryChance>
+			<MeleeDodgeChance>0.15</MeleeDodgeChance>
 		</value>
 	</Operation>
 
@@ -46,10 +37,10 @@
 					<capacities>
 						<li>Poke</li>
 					</capacities>
-					<power>2</power>
-					<cooldownTime>1.55</cooldownTime>
+					<power>3</power>
+					<cooldownTime>1.75</cooldownTime>
 					<chanceFactor>0.10</chanceFactor>
-					<armorPenetrationBlunt>0.45</armorPenetrationBlunt>
+					<armorPenetrationBlunt>0.55</armorPenetrationBlunt>
 					<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
 				</li>
 				<li Class="CombatExtended.ToolCE">
@@ -57,10 +48,10 @@
 					<capacities>
 						<li>Blunt</li>
 					</capacities>
-					<power>16</power>
-					<cooldownTime>1.82</cooldownTime>
+					<power>18</power>
+					<cooldownTime>2.02</cooldownTime>
 					<chanceFactor>0.90</chanceFactor>
-					<armorPenetrationBlunt>4.40</armorPenetrationBlunt>
+					<armorPenetrationBlunt>4.80</armorPenetrationBlunt>
 					<linkedBodyPartsGroup>Head</linkedBodyPartsGroup>
 				</li>
 			</tools>
