@@ -505,6 +505,7 @@ Remove Industrial Stuff |
 Revia Race |
 Revia Race - biotech |
 Rim Contractors Arsenal	|
+Rim Of Evil: Northern Frontier |
 Rim of Madness - Bones	|
 Rim of Madness - Vampires	|
 Rim of Madness - Werewolves	|
@@ -516,7 +517,7 @@ Rim-Effect: N7	|
 Rimedieval - Medieval Royalty   |
 Rimefeller	|
 Rim-Elves   |
-Rim-Gnoblins	| 
+Rim-Gnoblins	|
 Rim-Hivers!	|
 Rim Flood	|
 Rim-Robots_	|

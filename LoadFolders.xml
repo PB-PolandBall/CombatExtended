@@ -515,6 +515,7 @@
 		<li IfModActive="zerophoenix.contractorsarsenalfaction">ModPatches/Rim Contractors Arsenal</li>
 		<li IfModActive="Fenn.floodrace,zal.floodrace">ModPatches/Rim Flood</li>
 		<li IfModActive="VexedTrees980.RimGnoblinsBiotech">ModPatches/Rim Gnoblins</li>
+		<li IfModActive="JTC.Nordberg">ModPatches/Rim Of Evil Northern Frontier</li>
 		<li IfModActive="sihv.rombones">ModPatches/Rim of Madness - Bones</li>
 		<li IfModActive="RimOfMadness.Vampires">ModPatches/Rim of Madness - Vampires</li>
 		<li IfModActive="RimofMadness.Werewolves">ModPatches/Rim of Madness - Werewolves</li>
