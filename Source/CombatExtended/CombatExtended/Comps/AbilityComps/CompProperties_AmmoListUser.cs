@@ -40,7 +40,7 @@ public class CompProperties_AmmoListUser : CompProperties_AmmoUser
 }
 public class AmmoSpawnOption
 {
-    public FloatRange percentRange  = new FloatRange(1,1);
+    public FloatRange percentRange = new FloatRange (1,1);
     public AmmoDef ammoDef;
     public float weight = 1f;
 
